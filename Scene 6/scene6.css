@@ -47,3 +47,14 @@ body {
 .button8{background-color: #CC88F9}
 .button9{background-color: #873CF4}
 .button10{background-color: #873CF4}
+
+
+
+
+#mydiv {
+  position: absolute;
+}
+
+#mydivheader {
+  cursor: move;
+}
