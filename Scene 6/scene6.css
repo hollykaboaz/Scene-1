@@ -21,7 +21,7 @@ body {
   width:200px;
   height: 600px;
   background-color: black;
-opacity: 50%;
+  opacity: 50%;
 }
 
 .colorButton{
@@ -29,4 +29,21 @@ opacity: 50%;
   height: 20px;
   padding: 10px;
   background-color: pink;
+  margin-bottom: 15px;
 }
+.colorChoices {
+
+  position: absolute;
+  margin-left: 1250px;
+  margin-top: 140px;
+}
+.button1{background-color: #58A6C3}
+.button2{background-color: #7DE0E0}
+.button3{background-color: #AFE24F}
+.button4{background-color: #FBF168}
+.button5{background-color: #F3AF3D}
+.button6{background-color: #E7817A}
+.button7{background-color: #DE5CAB}
+.button8{background-color: #CC88F9}
+.button9{background-color: #873CF4}
+.button10{background-color: #873CF4}
