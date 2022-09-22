@@ -1,0 +1,25 @@
+body {
+  background-image: url("png4.png") ;
+  background-repeat: no-repeat;
+  background-size: 1450px 830px;
+}
+
+.prevButton{
+  width: 170px;
+  height: 50px;
+  margin-left: 55px;
+  margin-top: 750px;
+  padding: 10px;
+  background-color: transparent;
+  margin-bottom: 15px;
+}
+
+.nextButton{
+  width: 170px;
+  height: 50px;
+  margin-left: 1020px;
+  margin-top: 750px;
+  padding: 10px;
+  background-color: transparent;
+  margin-bottom: 15px;
+}
