@@ -1,0 +1,32 @@
+body {
+  background-image: url("2003.jpg") ;
+  background-repeat: no-repeat;
+  background-size: 1500px 800px;;
+
+}
+
+.website {
+  margin-left: 600px;
+  margin-top: 100px;
+  width:600px;
+  height: 600px;
+  background-color: black;
+  position: fixed;
+}
+
+.console {
+  position: fixed;
+  margin-left: 400px;
+  margin-top: 100px;
+  width:200px;
+  height: 600px;
+  background-color: black;
+opacity: 50%;
+}
+
+.colorButton{
+  width: 100px;
+  height: 20px;
+  padding: 10px;
+  background-color: pink;
+}
