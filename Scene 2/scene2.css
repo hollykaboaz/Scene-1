@@ -6,13 +6,13 @@ body {
 
 .playButton
  {
-   width: 150px;;
+   width: 160px;;
    height: 50px;;
    position: fixed;
    left: 1250px;
    top: 750px;
-   color: black;
+   color: transparent;
    background-color: transparent;
-   border: black;
+   border: none;
 
  }
