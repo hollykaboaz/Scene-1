@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="scene6.css">
     <script src="scene6.js"> </script>
-    <title></title>
+    <title>Background Color</title>
   </head>
   <body>
     <div class="website"></div>
-    <div class="console"></div>
-    <div id = "color" class = "colorChoices">
-      <div class="colorButton button1"> </div>
+    <div ondrop="drop(event)" ondragover="allowDrop(event)"class="console"></div>
+    <div class = "colorChoices">
+      <div draggable="true" ondragstart="drag(event)" class="colorButton button1"> </div>
       <div class="colorButton button2"> </div>
       <div class="colorButton button3"> </div>
       <div class="colorButton button4"> </div>
