@@ -125,6 +125,24 @@ function nextActivity(){
     form.appendChild(ip);
     activity1.appendChild(form);
   }
+  if(currentActivity == 3){
+    removeAllChildNodes(theConsole);
+    activity1 = document.getElementById('activity');
+    activity1.innerHTML = '';
+    // Creating acitivy 2: Adding title
+    document.getElementById('taskTitle').innerHTML = "BACKGROUND IMAGE";
+    var form = document.createElement("form");
+    form.setAttribute('id','form');
+    form.setAttribute('onSubmit',"");
+    form.setAttribute('target','_self');
+    var ip = document.createElement("input");
+    ip.setAttribute('type','text');
+    // ip.setAttribute('draggable','true');
+    ip.setAttribute('id','task');
+    ip.setAttribute('placeholder','Paste the link to your image here');
+    form.appendChild(ip);
+    activity1.appendChild(form);
+  }
 }
 
 function changeTitle() {
@@ -149,4 +167,5 @@ function changeTitle() {
   newDiv.appendChild(newContent2);
   newDiv.style.color = "white";
   theConsole.appendChild(newDiv);
+  currentActivity = 3;
 }
