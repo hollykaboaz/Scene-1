@@ -121,6 +121,16 @@ function changeTitle() {
   console.log('inside funciton');
   var title = document.getElementById("task").value;
   document.getElementById('websiteTitle').innerHTML = title;
-  
+  removeAllChildNodes(theConsole);
+  var titleString = "<h1> " + title + " </h1>";
+  theConsole = document.getElementById('console');
+  // create a new block of code
+  const newDiv = document.createElement("div");
+  // opening curly brace and selector
+  var newContent = document.createTextNode(titleString);
+  newDiv.appendChild(newContent);
+  newDiv.style.color = "white";
+  theConsole.appendChild(newDiv);
+
 
 }
