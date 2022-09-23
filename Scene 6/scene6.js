@@ -141,7 +141,7 @@ function nextActivity(){
     ip.setAttribute('type','text');
     // ip.setAttribute('draggable','true');
     ip.setAttribute('id','task');
-    ip.setAttribute('placeholder','Paste the link to your image here');
+    ip.setAttribute('placeholder','Paste image address');
     form.appendChild(ip);
     activity1.appendChild(form);
   }
@@ -176,8 +176,9 @@ function changeTitle() {
 function bgImage() {
   event.preventDefault();
   var imageLink = document.getElementById("task").value;
-  // Update Website Title
+  // Update Website Background
   document.getElementById('website').style.backgroundImage = "url('" + imageLink + "')";
   document.getElementById('website').style.backgroundSize = "cover";
   document.getElementById('website').style.backgroundPosition = "center";
+  currentActivity = 4;
 }
