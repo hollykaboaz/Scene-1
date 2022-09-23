@@ -99,3 +99,17 @@ function removeAllChildNodes(parent) {
         parent.removeChild(parent.firstChild);
     }
 }
+
+function nextActivity(){
+  activity1 = document.getElementById('activity');
+  activity1.innerHTML = '';
+  // Creating acitivy 2: Adding title
+  var ip = document.createElement("input");
+  ip.setAttribute('type','text');
+  ip.setAttribute('id','title');
+  activity1.appendChild(ip);
+
+
+}
+var myTitle = document.getElementById('title').value;
+console.log(myTitle);
