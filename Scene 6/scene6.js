@@ -1,5 +1,6 @@
 // Allows user to drop colors on console
-
+var currentActivity = 1
+var currentBgColor = "";
 function allowDrop(ev) {
   ev.preventDefault();
 }
@@ -61,6 +62,9 @@ function dropColor(ev, text) {
       website.style.backgroundColor = color;
       break;
     default:
+      color = 'black';
+      website.style.backgroundColor = color;
+      break;
   }
   // create a new block of code
   const newDiv = document.createElement("div");
@@ -90,7 +94,9 @@ function dropColor(ev, text) {
   // styling new block of code
   newDiv.style.color = "white";
   ev.target.appendChild(newDiv);
-
+  // swtich to next activity
+  currentBgColor = color;
+  currentActivity = 2;
 }
 
 
@@ -102,36 +108,45 @@ function removeAllChildNodes(parent) {
 }
 
 function nextActivity(){
-  activity1 = document.getElementById('activity');
-  activity1.innerHTML = '';
-  // Creating acitivy 2: Adding title
-  document.getElementById('taskTitle').innerHTML = "CREATE A TITLE";
-  var form = document.createElement("form");
-  form.setAttribute('id','form');
-  form.setAttribute('onSubmit',"changeTitle()");
-  form.setAttribute('target','_self');
-  var ip = document.createElement("input");
-  ip.setAttribute('type','text');
-  ip.setAttribute('draggable','true');
-  ip.setAttribute('id','task');
-  ip.setAttribute('placeholder','Type Your Website Title');
-  form.appendChild(ip);
-  activity1.appendChild(form);
+  if(currentActivity == 2){
+    activity1 = document.getElementById('activity');
+    activity1.innerHTML = '';
+    // Creating acitivy 2: Adding title
+    document.getElementById('taskTitle').innerHTML = "CREATE A TITLE";
+    var form = document.createElement("form");
+    form.setAttribute('id','form');
+    form.setAttribute('onSubmit',"changeTitle()");
+    form.setAttribute('target','_self');
+    var ip = document.createElement("input");
+    ip.setAttribute('type','text');
+    // ip.setAttribute('draggable','true');
+    ip.setAttribute('id','task');
+    ip.setAttribute('placeholder','Type Your Website Title');
+    form.appendChild(ip);
+    activity1.appendChild(form);
+  }
 }
 
 function changeTitle() {
   event.preventDefault();
-  console.log('inside funciton');
   var title = document.getElementById("task").value;
+  // Update Website Title
   document.getElementById('websiteTitle').innerHTML = title;
+  // Clear console and add h1 code to it
   removeAllChildNodes(theConsole);
   var titleString = "<h1> " + title + " </h1>";
-  theConsole = document.getElementById('console');
-  // create a new block of code
+  // create a new div
   const newDiv = document.createElement("div");
-  // opening curly brace and selector
-  var newContent = document.createTextNode(titleString);
+  // text node for opening tag
+  var newContent = document.createTextNode("<h1> ");
   newDiv.appendChild(newContent);
+  // color coded title
+  var colorfulTitle = document.createElement("span");
+  colorfulTitle.innerHTML = title;
+  colorfulTitle.style.color = currentBgColor;
+  newDiv.appendChild(colorfulTitle);
+  var newContent2 = document.createTextNode(" </h1>");
+  newDiv.appendChild(newContent2);
   newDiv.style.color = "white";
   theConsole.appendChild(newDiv);
 }

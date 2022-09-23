@@ -11,7 +11,8 @@ body {
 #taskTitle{
   position: fixed;
   margin-left: 745px;
-  color: black;
+  color: white;
+  margin-top: 50px;
 }
 
 #website {
@@ -25,6 +26,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#consoleTitle{
+  position: fixed;
+  margin-left: 400px;
+  color: white;
+  margin-top: 50px;
 }
 
 #console {
