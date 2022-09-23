@@ -1,4 +1,5 @@
 // Allows user to drop colors on console
+
 function allowDrop(ev) {
   ev.preventDefault();
 }
@@ -104,12 +105,14 @@ function nextActivity(){
   activity1 = document.getElementById('activity');
   activity1.innerHTML = '';
   // Creating acitivy 2: Adding title
+  document.getElementById('taskTitle').innerHTML = "CREATE A TITLE";
   var form = document.createElement("form");
   form.setAttribute('id','form');
   form.setAttribute('onSubmit',"changeTitle()");
   form.setAttribute('target','_self');
   var ip = document.createElement("input");
   ip.setAttribute('type','text');
+  ip.setAttribute('draggable','true');
   ip.setAttribute('id','task');
   ip.setAttribute('placeholder','Type Your Website Title');
   form.appendChild(ip);
@@ -131,6 +134,4 @@ function changeTitle() {
   newDiv.appendChild(newContent);
   newDiv.style.color = "white";
   theConsole.appendChild(newDiv);
-
-
 }
