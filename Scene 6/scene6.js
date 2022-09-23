@@ -109,6 +109,8 @@ function removeAllChildNodes(parent) {
 
 function nextActivity(){
   if(currentActivity == 2){
+    window.prompt("Which webbie handles all the styling of your webpage?");
+    window.alert("The answer was CSS Webbie :)");
     activity1 = document.getElementById('activity');
     activity1.innerHTML = '';
     // Creating acitivy 2: Adding title
@@ -133,7 +135,7 @@ function nextActivity(){
     document.getElementById('taskTitle').innerHTML = "BACKGROUND IMAGE";
     var form = document.createElement("form");
     form.setAttribute('id','form');
-    form.setAttribute('onSubmit',"");
+    form.setAttribute('onSubmit',"bgImage()");
     form.setAttribute('target','_self');
     var ip = document.createElement("input");
     ip.setAttribute('type','text');
@@ -168,4 +170,14 @@ function changeTitle() {
   newDiv.style.color = "white";
   theConsole.appendChild(newDiv);
   currentActivity = 3;
+}
+
+
+function bgImage() {
+  event.preventDefault();
+  var imageLink = document.getElementById("task").value;
+  // Update Website Title
+  document.getElementById('website').style.backgroundImage = "url('" + imageLink + "')";
+  document.getElementById('website').style.backgroundSize = "cover";
+  document.getElementById('website').style.backgroundPosition = "center";
 }
