@@ -7,7 +7,7 @@ function drag(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
 }
 
-function drop(ev, text) {
+function dropColor(ev, text) {
   ev.preventDefault();
   // data = dragged items ID
   var data = ev.dataTransfer.getData("text");
@@ -104,12 +104,23 @@ function nextActivity(){
   activity1 = document.getElementById('activity');
   activity1.innerHTML = '';
   // Creating acitivy 2: Adding title
+  var form = document.createElement("form");
+  form.setAttribute('id','form');
+  form.setAttribute('onSubmit',"changeTitle()");
+  form.setAttribute('target','_self');
   var ip = document.createElement("input");
   ip.setAttribute('type','text');
-  ip.setAttribute('id','title');
-  activity1.appendChild(ip);
+  ip.setAttribute('id','task');
+  ip.setAttribute('placeholder','Type Your Website Title');
+  form.appendChild(ip);
+  activity1.appendChild(form);
+}
 
+function changeTitle() {
+  event.preventDefault();
+  console.log('inside funciton');
+  var title = document.getElementById("task").value;
+  document.getElementById('websiteTitle').innerHTML = title;
+  
 
 }
-var myTitle = document.getElementById('title').value;
-console.log(myTitle);

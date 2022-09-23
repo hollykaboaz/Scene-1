@@ -8,8 +8,11 @@
     <title>Background Color</title>
   </head>
   <body>
-    <div id ="website"></div>
-    <div id="console" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+    <div id ="website">
+      <h1 id="websiteTitle"> </h1>
+    </div>
+    <div id="console" ondrop="dropColor(event)" ondragover="allowDrop(event)"> </div>
+
     <img id = "bottomBorder" src = "bottomBorder.png"/>
       <div id = "activity" class = "colorChoices">
         <div id = "button1" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
