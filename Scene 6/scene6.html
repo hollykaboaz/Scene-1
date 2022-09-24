@@ -4,33 +4,35 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="scene6.css">
     <script src="scene6.js"> </script>
+    <!-- <script src="../Scene 7/scene7.js"><script> -->
     <title>Background Color</title>
   </head>
+  <h2 id = "consoleTitle"> YOUR CODE </h2>
+  <h2 id = "taskTitle"> CHOOSE YOUR BACKGROUND COLOR </h2>
   <body>
-    <div class="website"></div>
-    <div ondrop="drop(event)" ondragover="allowDrop(event)"class="console"></div>
-    <div class = "colorChoices">
-      <div draggable="true" ondragstart="drag(event)" class="colorButton button1"> </div>
-      <div class="colorButton button2"> </div>
-      <div class="colorButton button3"> </div>
-      <div class="colorButton button4"> </div>
-      <div class="colorButton button5"> </div>
-      <div class="colorButton button6"> </div>
-      <div class="colorButton button7"> </div>
-      <div class="colorButton button8"> </div>
-      <div class="colorButton button9"> </div>
-      <div class="colorButton button10"> </div>
-     </div>
+    <div id ="website">
+      <h1 id="websiteTitle"> </h1>
+      <img id = "bgImage"/>
+    </div>
+    <div id="console" ondrop="dropColor(event)" ondragover="allowDrop(event)"> </div>
 
-    <!-- <button type="button" name="button"></button>
-    <button type="button" name="button"></button>
-    <button type="button" name="button"></button>
-    <button type="button" name="button"></button>
-    <button type="button" name="button"></button>
-    <button type="button" name="button"></button>
-    <button type="button" name="button"></button>
-    <button type="button" name="button"></button>
-    <button type="button" name="button"></button> -->
+    <img id = "bottomBorder" src = "bottomBorder.png"/>
+      <div id = "activity" class = "colorChoices">
+        <div id = "button1" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+        <div id = "button2" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+        <div id = "button3" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+        <div id = "button4" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+        <div id = "button5" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+        <div id = "button6" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+        <div id = "button7" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+        <div id = "button8" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+        <div id = "button9" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+        <div id = "button10"draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+       </div>
+    </div>
+    <button onclick="nextActivity()"type="button" id="nextButton"> Next >> </button>
+
+
 
 
   </body>
