@@ -110,7 +110,7 @@ function removeAllChildNodes(parent) {
 function nextActivity(){
   if(currentActivity == 2){
     window.prompt("Which webbie handles all the styling of your webpage?");
-    window.alert("The answer was CSS Webbie :)");
+    window.alert("The answer was CSS");
     activity1 = document.getElementById('activity');
     activity1.innerHTML = '';
     // Creating acitivy 2: Adding title
@@ -142,6 +142,26 @@ function nextActivity(){
     // ip.setAttribute('draggable','true');
     ip.setAttribute('id','task');
     ip.setAttribute('placeholder','Paste image address');
+    form.appendChild(ip);
+    activity1.appendChild(form);
+  }
+  if(currentActivity == 4){
+    removeAllChildNodes(theConsole);
+    activity1 = document.getElementById('activity');
+    activity1.innerHTML = '';
+    // Creating acitivy 2: Adding a paragraph
+    document.getElementById('taskTitle').innerHTML = "PARAGRAPHS";
+    // First input box
+    var form = document.createElement("form");
+    form.setAttribute('id','form');
+    form.setAttribute('onSubmit',"paragraphs()");
+    form.setAttribute('target','_self');
+    var ip = document.createElement("input");
+    ip.setAttribute('type','text');
+    // ip.setAttribute('draggable','true');
+    ip.setAttribute('id','task');
+    ip.setAttribute('placeholder','One sentence about your website');
+    form.appendChild(ip);
     form.appendChild(ip);
     activity1.appendChild(form);
   }
