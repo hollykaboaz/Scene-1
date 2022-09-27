@@ -16,3 +16,21 @@ body {
    border: none;
 
  }
+ .helpButton{
+   width: 170px;
+   height: 50px;
+   margin-left: 1170px;
+   margin-top: 295px;
+   padding: 10px;
+   margin-bottom: 15px;
+   color: transparent;
+   background-color: transparent;
+   border: none;
+ }
+.Going up.mp3{
+  margin-left: 0px;
+  margin-top: 0px;
+  color: transparent;
+  background-color: transparent;
+  border: none;
+}
