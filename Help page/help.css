@@ -1,5 +1,58 @@
+header{
+
+}
 body {
   background-image: url("Help.jpg") ;
   background-repeat: no-repeat;
   background-size: 1440px 825px;
+}
+#panel {
+  width: 500px;
+  height: 100px;
+}
+#IDofWord {
+  text-align: center;
+  color: red;
+  font-size: 40px;
+}
+#IDofWord:hover {
+  color: green;
+}
+
+#MeanOfDes{
+  display: none;
+  font-size: 40px;
+  color: red;
+}
+#PLAYBUTTON,#SURVEYBUTTON{
+  text-align: center;
+  margin-left: 380px;
+  color: red;
+  font-size: 40px;
+}
+
+h1 {
+  text-align: center;
+  color: red;
+  font-size: 40px;
+}
+
+h1:hover {
+  color: green;
+}
+#threebutton {
+  display: none;
+}
+
+#Project,#TAP,#US{
+  text-align: center;
+  margin-left: 200px;
+  color: red;
+  font-size: 60px;
+}
+
+#MeanOfUS, #MeanOfTAP, #MeanOfProject {
+  display: none;
+  font-size: 40px;
+  color: red;
 }
