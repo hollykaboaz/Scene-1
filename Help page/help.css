@@ -2,6 +2,17 @@ body{
   font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
+header {
+  background-color: #FFFFFF;
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
+p{
+  margin: 50px;
+}
+
 #panel {
   width: 800px;
   height: 100px;
@@ -9,33 +20,33 @@ body{
 }
 #IDofWord {
   text-align: center;
-  color: red;
-  font-size: 40px;
+  color: white;
+  font-size: 400px;
 }
 #IDofWord:hover {
-  color: green;
+  color: white;
 }
 
 #MeanOfDes{
   display: none;
   font-size: 40px;
-  color: red;
+  color: black;
 }
 #PLAYBUTTON,#SURVEYBUTTON{
   text-align: center;
   margin-left: 380px;
-  color: red;
+  color: black;
   font-size: 40px;
 }
 
 h1 {
   text-align: center;
-  color: red;
+  color: black;
   font-size: 40px;
 }
 
 h1:hover {
-  color: green;
+  color: white;
 }
 #threebutton {
   display: none;
@@ -44,12 +55,12 @@ h1:hover {
 #Project,#TAP,#US{
   text-align: center;
   margin-left: 200px;
-  color: red;
+  color: black;
   font-size: 60px;
 }
 
 #MeanOfUS, #MeanOfTAP, #MeanOfProject {
   display: none;
   font-size: 40px;
-  color: red;
+  color: black;
 }
