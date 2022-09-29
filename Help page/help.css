@@ -1,14 +1,11 @@
-header{
+body{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
 
-}
-body {
-  background-image: url("Help.jpg") ;
-  background-repeat: no-repeat;
-  background-size: 1440px 825px;
-}
 #panel {
-  width: 500px;
+  width: 800px;
   height: 100px;
+  margin: auto;
 }
 #IDofWord {
   text-align: center;
