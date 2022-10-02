@@ -131,7 +131,7 @@ function nextActivity(){
     removeAllChildNodes(theConsole);
     activity1 = document.getElementById('activity');
     activity1.innerHTML = '';
-    // Creating acitivy 2: Adding title
+    // Creating acitivy 3: Adding background image
     document.getElementById('taskTitle').innerHTML = "BACKGROUND IMAGE";
     var form = document.createElement("form");
     form.setAttribute('id','form');
@@ -149,7 +149,7 @@ function nextActivity(){
     removeAllChildNodes(theConsole);
     activity1 = document.getElementById('activity');
     activity1.innerHTML = '';
-    // Creating acitivy 2: Adding a paragraph
+    // Creating acitivy 4: Adding a paragraph
     document.getElementById('taskTitle').innerHTML = "PARAGRAPHS";
     // First input box
     var form = document.createElement("form");
@@ -201,4 +201,27 @@ function bgImage() {
   document.getElementById('website').style.backgroundSize = "cover";
   document.getElementById('website').style.backgroundPosition = "center";
   currentActivity = 4;
+}
+
+function paragraphs() {
+  event.preventDefault();
+  // clear the console
+  removeAllChildNodes(theConsole);
+  // storing user input
+  var paragraph = document.getElementById("task").value;
+  // code string for console
+  var paragraphString = "<p> " + paragraph + " </p>";
+  // create a new div
+  const newDiv = document.createElement("div");
+  // text node for paragraph code
+  var newContent = document.createTextNode(paragraphString);
+  newDiv.appendChild(newContent);
+  newDiv.style.color = "white";
+  theConsole.appendChild(newDiv);
+  // adding paragraph underneath title
+  var pElement = document.createElement("p");
+  pElement.innerHTML = paragraph;
+  pElement.style.color = "white";
+  website.appendChild(pElement);
+  currentActivity = 5;
 }
