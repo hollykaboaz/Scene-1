@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
 body {
+  width: 100vw;
+  min-height: 100vh;
   background-image: url("2003.jpg") ;
-  background-repeat: no-repeat;
-  background-size: 1440px 825px;;
+  background-size: cover;
   font-family: 'Amatic SC', cursive;
   font-size: 25px;
 }
@@ -17,8 +18,8 @@ body {
 
 #website {
   font-family: sans-serif;
-  margin-left: 600px auto;
-  margin-top: 100px auto;
+  margin-left: 600px;
+  margin-top: 100px;
   width:600px;
   height: 600px;
   background-color: black;
@@ -31,19 +32,36 @@ body {
 
 #consoleTitle{
   position: fixed;
-  margin-left: 400px;
+  margin-left: 350px;
+  color: white;
+  margin-top: 50px;
+}
+
+#consoleTitle2{
+  position: fixed;
+  margin-left: 50px;
   color: white;
   margin-top: 50px;
 }
 
 #console {
   position: fixed;
-  margin-left: 325px;
+  margin-left: 320px;
   margin-top: 100px;
   width:225px;
   height: 551px;
-  background-color: black;
-  opacity: 50%;
+  background-color: rgba(0,0,0,0.5);
+  padding: 25px;
+  word-wrap: break-word;
+}
+
+#console2{
+  position: fixed;
+  margin-left: 30px;
+  margin-top: 100px;
+  width:225px;
+  height: 551px;
+  background-color: rgba(0,0,0,0.5);
   padding: 25px;
 }
 
@@ -63,7 +81,7 @@ body {
 }
 
 .colorChoices {
-  position: absolute;
+  position: fixed;
   margin-left: 1250px;
   margin-top: 140px;
 }
@@ -82,6 +100,8 @@ body {
 
 #websiteTitle{
   color: white;
+  position: fixed;
+  margin-top: -55px;
 }
 
 #nextButton {

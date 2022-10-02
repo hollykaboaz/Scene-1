@@ -18,8 +18,8 @@ function dropColor(ev, text) {
   console.log(chosenButton);
   // Change website background color depending on the buttonID
   website = document.getElementById('website');
-  theConsole = document.getElementById('console');
-  removeAllChildNodes(theConsole);
+  cssConsole = document.getElementById('console');
+  removeAllChildNodes(cssConsole);
   switch (data) {
     case "button1":
       color = '#58A6C3';
@@ -89,11 +89,15 @@ function dropColor(ev, text) {
   var br = document.createElement("br");
   newDiv.appendChild(br);
   // closing curly brace
-  newContent = document.createTextNode("}");
-  newDiv.appendChild(newContent);
+  const newDiv2 = document.createElement("div");
+  var brace = document.createTextNode("}");
+  newDiv2.appendChild(brace);
+  newDiv2.style.color = "white";
+  brace.id = "closing";
   // styling new block of code
   newDiv.style.color = "white";
   ev.target.appendChild(newDiv);
+  ev.target.appendChild(newDiv2);
   // swtich to next activity
   currentBgColor = color;
   currentActivity = 2;
@@ -109,8 +113,8 @@ function removeAllChildNodes(parent) {
 
 function nextActivity(){
   if(currentActivity == 2){
-    window.prompt("Which webbie handles all the styling of your webpage?");
-    window.alert("The answer was CSS");
+    // window.prompt("Which webbie handles all the styling of your webpage?");
+    // window.alert("The answer was CSS");
     activity1 = document.getElementById('activity');
     activity1.innerHTML = '';
     // Creating acitivy 2: Adding title
@@ -128,7 +132,6 @@ function nextActivity(){
     activity1.appendChild(form);
   }
   if(currentActivity == 3){
-    removeAllChildNodes(theConsole);
     activity1 = document.getElementById('activity');
     activity1.innerHTML = '';
     // Creating acitivy 3: Adding background image
@@ -146,7 +149,6 @@ function nextActivity(){
     activity1.appendChild(form);
   }
   if(currentActivity == 4){
-    removeAllChildNodes(theConsole);
     activity1 = document.getElementById('activity');
     activity1.innerHTML = '';
     // Creating acitivy 4: Adding a paragraph
@@ -172,8 +174,6 @@ function changeTitle() {
   var title = document.getElementById("task").value;
   // Update Website Title
   document.getElementById('websiteTitle').innerHTML = title;
-  // Clear console and add h1 code to it
-  removeAllChildNodes(theConsole);
   var titleString = "<h1> " + title + " </h1>";
   // create a new div
   const newDiv = document.createElement("div");
@@ -188,15 +188,31 @@ function changeTitle() {
   var newContent2 = document.createTextNode(" </h1>");
   newDiv.appendChild(newContent2);
   newDiv.style.color = "white";
-  theConsole.appendChild(newDiv);
+  var htmlConsole = document.getElementById('console2');
+  htmlConsole.appendChild(newDiv);
   currentActivity = 3;
 }
 
 
 function bgImage() {
   event.preventDefault();
+  cssConsole.removeChild(cssConsole.lastChild);
   var imageLink = document.getElementById("task").value;
-  // Update Website Background
+  var imgString = "\xA0\xA0background-image: \xA0\xA0url(" + imageLink + ");";
+  // create a new div
+  const newDiv = document.createElement("div");
+  // text node for opening tag
+  var newContent = document.createTextNode(imgString);
+  // curly brace
+  const newDiv2 = document.createElement("div");
+  var brace = document.createTextNode("}");
+  newDiv2.appendChild(brace);
+  newDiv2.style.color = "white";
+  newDiv.appendChild(newContent);
+  cssConsole.appendChild(newDiv);
+  cssConsole.appendChild(newDiv2);
+  newDiv.style.color = "white";
+  newDiv.fontSize = '10';
   document.getElementById('website').style.backgroundImage = "url('" + imageLink + "')";
   document.getElementById('website').style.backgroundSize = "cover";
   document.getElementById('website').style.backgroundPosition = "center";
@@ -205,8 +221,8 @@ function bgImage() {
 
 function paragraphs() {
   event.preventDefault();
-  // clear the console
-  removeAllChildNodes(theConsole);
+  // // clear the console
+  // removeAllChildNodes(cssConsole);
   // storing user input
   var paragraph = document.getElementById("task").value;
   // code string for console
@@ -217,7 +233,8 @@ function paragraphs() {
   var newContent = document.createTextNode(paragraphString);
   newDiv.appendChild(newContent);
   newDiv.style.color = "white";
-  theConsole.appendChild(newDiv);
+  var htmlConsole = document.getElementById('console2');
+  htmlConsole.appendChild(newDiv);
   // adding paragraph underneath title
   var pElement = document.createElement("p");
   pElement.innerHTML = paragraph;
