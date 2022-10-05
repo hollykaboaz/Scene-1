@@ -1,18 +1,22 @@
-body {
-  background-image: url("scene2.png") ;
-  background-repeat: no-repeat;
-  background-size: 1440px 825px;;
+img {
+  width: 100%;
+  vertical-align: text-bottom;
 }
 
-.playButton
- {
-   width: 160px;;
-   height: 50px;;
-   position: fixed;
-   left: 1250px;
-   top: 750px;
-   color: transparent;
-   background-color: transparent;
-   border: none;
+.container {
+  position: relative;
+}
 
- }
+.container a {
+  position: absolute;
+  display: inline-block;
+  background-color: #555;
+  opacity: 50%;
+}
+
+#next-link {
+  width: 15%;
+  height: 14%;
+  bottom: 0%;
+  right: 0%;
+}

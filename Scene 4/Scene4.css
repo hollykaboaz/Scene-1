@@ -1,29 +1,29 @@
-body {
-  background-image: url("png4.png") ;
-  background-repeat: no-repeat;
-  background-size: 1450px 830px;
+img {
+  width: 100%;
+  vertical-align: text-bottom;
 }
 
-.prevButton{
-  width: 170px;
-  height: 50px;
-  margin-left: 55px;
-  margin-top: 750px;
-  padding: 10px;
-  margin-bottom: 15px;
-  color: transparent;
-  background-color: transparent;
-  border: none;
+.container {
+  position: relative;
 }
 
-.nextButton{
-  width: 170px;
-  height: 50px;
-  margin-left: 1020px;
-  margin-top: 750px;
-  padding: 10px;
-  margin-bottom: 15px;
-  color: transparent;
-  background-color: transparent;
-  border: none;
+.container a {
+  position: absolute;
+  display: inline-block;
+  background-color: #555;
+  opacity: 50%;
+}
+
+#prev-link {
+  width: 15%;
+  height: 14%;
+  bottom: 0%;
+  left: 0%;
+}
+
+#next-link {
+  width: 15%;
+  height: 14%;
+  bottom: 0%;
+  right: 0%;
 }
