@@ -122,3 +122,42 @@ body {
   padding: 30px;
   border: none;
 }
+ #subheadings{
+   visibility: hidden;
+   display: inline-flex;
+   position: fixed;
+   width: 600px;
+   height: 55px;
+   max-width: 600px;
+   max-height: 55px;
+  background-color: #333;
+   z-index: 20;
+   font-family: serif;
+   margin-top: 100px;
+   margin-left: 600px;
+   color:White;
+ }
+ #subheadings ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+#subheadings li {
+  float: left;
+}
+
+#subheadings li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+#subheadings li a:hover {
+  background-color: #111;
+}

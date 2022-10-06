@@ -167,6 +167,47 @@ function nextActivity(){
     form.appendChild(ip);
     activity1.appendChild(form);
   }
+  if(currentActivity == 5){
+    window.alert("Thanks for playing!");
+    // // Clear activity section
+    // activity1 = document.getElementById('activity');
+    // activity1.innerHTML = '';
+    // // Changing Tite of Activity to "Headings"
+    // document.getElementById('taskTitle').innerHTML = "Headings";
+    // // Creating form elements
+    // var headingsForm = document.createElement("form");
+    // var inputBox1 = document.createElement("input");
+    // var inputBox2 = document.createElement("input");
+    // var inputBox3 = document.createElement("input");
+    // var inputBox4 = document.createElement("input");
+    // var submitButton = document.createElement("input");
+    // // Assigning form attributes
+    // headingsForm.setAttribute('id','form2');
+    // headingsForm.setAttribute('onSubmit',"headAcivity()");
+    // headingsForm.setAttribute('target','_self');
+    // // Assigning input box attributes
+    // inputBox1.setAttribute('type','text');
+    // inputBox1.setAttribute('id','heading1');
+    // inputBox1.setAttribute('placeholder','Heading 1');
+    // inputBox2.setAttribute('type','text');
+    // inputBox2.setAttribute('id','heading2');
+    // inputBox2.setAttribute('placeholder','Heading 2');
+    // inputBox3.setAttribute('type','text');
+    // inputBox3.setAttribute('id','heading3');
+    // inputBox3.setAttribute('placeholder','Heading 3');
+    // inputBox4.setAttribute('type','text');
+    // inputBox4.setAttribute('id','heading4');
+    // inputBox4.setAttribute('placeholder','Heading 4');
+    // submitButton.setAttribute('type','submit');
+    // submitButton.setAttribute('value','Create Headings');
+    // // Adding created elements to document
+    // headingsForm.appendChild(inputBox1);
+    // headingsForm.appendChild(inputBox2);
+    // headingsForm.appendChild(inputBox3);
+    // headingsForm.appendChild(inputBox4);
+    // headingsForm.appendChild(submitButton);
+    // activity1.appendChild(headingsForm);
+  }
 }
 
 function changeTitle() {
@@ -241,4 +282,31 @@ function paragraphs() {
   pElement.style.color = "white";
   website.appendChild(pElement);
   currentActivity = 5;
+}
+function headActivity() {
+  console.log("inside");
+  event.preventDefault();
+  // Store all input field values
+  var h1 = document.getElementById("heading1").value;
+  var h2 = document.getElementById("heading2").value;
+  var h3 = document.getElementById("heading3").value;
+  var h4 = document.getElementById("heading4").value;
+
+console.log(h1);
+console.log(h2);
+console.log(h3);
+console.log(h4);
+  // Storing subheading section
+  var navbar = document.getElementById('subheadings');
+  var sh1 = document.getElementById('sh1');
+  var sh2 = document.getElementById('sh2');
+  var sh3 = document.getElementById('sh3');
+  var sh4 = document.getElementById('sh4');
+  // Changing subheadings
+  sh1.innerHTML = h1;
+  sh2.innerHTML = h2;
+  sh3.innerHTML = h3;
+  sh4.innerHTML = h4;
+  // Show navbar with subheadings
+  navbar.style.visibility = "visible";
 }
