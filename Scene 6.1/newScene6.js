@@ -4,12 +4,13 @@ titleActivity = false;
 paragraphActivity = false;
 titleColorActivity = false;
 paragraphColorActivity = false;
+buttonStylingActivity = false;
+linksActivity = false;
 // The function is called  when an element is being dragged over the console
 function allowDrop(ev) {
   // prevent page any default effects
   ev.preventDefault();
 }
-
 // This function is called when an element is starting to drag ( in opur case a button)
 function drag(ev) {
   // set the dragged item's ID as it's data it carries
@@ -19,7 +20,6 @@ function drag(ev) {
   img.src = "backgroundColor.png";
   ev.dataTransfer.setDragImage(img,0,0);
 }
-
 // This function is called once a button is dropped on the console
 // changes background color and adds console code
 function dropColor(ev, text) {
@@ -42,12 +42,19 @@ function dropColor(ev, text) {
   document.getElementById('bgColorValue').innerHTML = buttonColor;
   document.getElementById('bgColorValue').style.color = buttonColor;
   document.getElementById('bgColorAttritbute').style.display = "inline";
+  // quick glow
+  setTimeout(function() {
+    document.getElementById('bgColorAttritbute').classList.add('mat-cancel-color');
+    document.getElementById('bgColorAttritbute').classList.add('mat-cancel-color');
+  },1);
+  // remove glow
+  document.getElementById('bgColorAttritbute').classList.remove('mat-cancel-color');
+  document.getElementById('bgColorAttritbute').classList.remove('mat-cancel-color');
   // mark activity as completed
   backgroundActivity = true;
   // setting hgihlighted color to chosen bg color
   highlightedColor = buttonColor;
 }
-
 // checks if current activity is complete if so moves to next actvity
 function submitBgActivity(activity){
   console.log(backgroundActivity);
@@ -75,13 +82,244 @@ function submitBgActivity(activity){
       // change website title and title value to text in input field
       document.getElementById('websiteTitle').style.display = "inline";
       document.getElementById("websiteTitle").innerHTML = titleInputField.value;
+      document.getElementById("websiteTitle2").innerHTML = titleInputField.value;
+      document.getElementById("websiteTitle3").innerHTML = titleInputField.value;
+      document.getElementById("websiteTitle4").innerHTML = titleInputField.value;
+      document.getElementById("websiteTitle5").innerHTML = titleInputField.value;
+      document.getElementById("websiteTitle6").innerHTML = titleInputField.value;
       document.getElementById("titleValue").innerHTML = titleInputField.value;
       document.getElementById("titleValue").style.color = highlightedColor;
       document.getElementById('titleCode').style.display = "inline";
+      // quick glow
+      setTimeout(function() {
+        document.getElementById('titleCode').classList.add('mat-cancel-color');
+      },1);
+      // remove glow
+      document.getElementById('titleCode').classList.remove('mat-cancel-color');
+      document.getElementById('titleCode').classList.remove('mat-cancel-color');
+      document.getElementById("h1check").checked = true;
       titleInputField.value = "";
       titleActivity = true;
     }
     });
+
+    // border checkbox input
+    var h1checkBox = document.getElementById('h1check');
+    h1checkBox.addEventListener('change', () => {
+    if (h1checkBox.checked) {
+      // change h target
+      document.getElementById('chosenHeader').innerHTML= 'h1';
+      document.getElementById('chosenHeaderCloser').innerHTML= 'h1';
+      // quick glow
+      setTimeout(function() {
+        document.getElementById('chosenHeader').classList.add('mat-cancel-color');
+        document.getElementById('chosenHeaderCloser').classList.add('mat-cancel-color');
+      },1);
+      // remove glow
+      document.getElementById('chosenHeader').classList.remove('mat-cancel-color');
+      document.getElementById('chosenHeaderCloser').classList.remove('mat-cancel-color');
+
+      // unshow all other headings
+      document.getElementById('websiteTitle3').style.display = 'none';
+      document.getElementById('websiteTitle2').style.display = 'none';
+      document.getElementById('websiteTitle4').style.display = 'none';
+      document.getElementById('websiteTitle5').style.display = 'none';
+      document.getElementById('websiteTitle6').style.display = 'none';
+      // uncheck other boxes
+      document.getElementById("h2check").checked = false;
+      document.getElementById("h3check").checked = false;
+      document.getElementById("h4check").checked = false;
+      document.getElementById("h5check").checked = false;
+      document.getElementById("h6check").checked = false;
+      // show h1 on webpage
+      document.getElementById('websiteTitle').style.display = 'inline';
+    }else{
+    }
+  });
+
+  var h2checkBox = document.getElementById('h2check');
+  h2checkBox.addEventListener('change', () => {
+  if (h2checkBox.checked) {
+    // change h target
+    document.getElementById('chosenHeader').innerHTML= 'h2';
+    document.getElementById('chosenHeaderCloser').innerHTML= 'h2';
+
+    // quick glow
+    setTimeout(function() {
+      document.getElementById('chosenHeader').classList.add('mat-cancel-color');
+      document.getElementById('chosenHeaderCloser').classList.add('mat-cancel-color');
+    },1);
+    // remove glow
+    document.getElementById('chosenHeader').classList.remove('mat-cancel-color');
+    document.getElementById('chosenHeaderCloser').classList.remove('mat-cancel-color');
+    // unshow all other headings
+    document.getElementById('websiteTitle').style.display = 'none';
+    document.getElementById('websiteTitle3').style.display = 'none';
+    document.getElementById('websiteTitle4').style.display = 'none';
+    document.getElementById('websiteTitle5').style.display = 'none';
+    document.getElementById('websiteTitle6').style.display = 'none';
+    // uncheck all other boxes
+    document.getElementById("h1check").checked = false;
+    document.getElementById("h3check").checked = false;
+    document.getElementById("h4check").checked = false;
+    document.getElementById("h5check").checked = false;
+    document.getElementById("h6check").checked = false;
+    // show h1 on webpage
+    document.getElementById('websiteTitle2').style.display = 'inline';
+  }else{
+
+    // some code
+    document.getElementById('websiteTitle2').style.display = 'none';
+  }
+});
+
+var h3checkBox = document.getElementById('h3check');
+h3checkBox.addEventListener('change', () => {
+if (h3checkBox.checked) {
+  // change h target
+  document.getElementById('chosenHeader').innerHTML= 'h3';
+  document.getElementById('chosenHeaderCloser').innerHTML= 'h3';
+
+  // quick glow
+  setTimeout(function() {
+    document.getElementById('chosenHeader').classList.add('mat-cancel-color');
+    document.getElementById('chosenHeaderCloser').classList.add('mat-cancel-color');
+  },1);
+  // remove glow
+  document.getElementById('chosenHeader').classList.remove('mat-cancel-color');
+  document.getElementById('chosenHeaderCloser').classList.remove('mat-cancel-color');
+  // unshow all other headings
+  document.getElementById('websiteTitle').style.display = 'none';
+  document.getElementById('websiteTitle2').style.display = 'none';
+  document.getElementById('websiteTitle4').style.display = 'none';
+  document.getElementById('websiteTitle5').style.display = 'none';
+  document.getElementById('websiteTitle6').style.display = 'none';
+
+  // uncheck all other boxes
+  document.getElementById("h1check").checked = false;
+  document.getElementById("h2check").checked = false;
+  document.getElementById("h4check").checked = false;
+  document.getElementById("h5check").checked = false;
+  document.getElementById("h6check").checked = false;
+  // show h1 on webpage
+  document.getElementById('websiteTitle3').style.display = 'inline';
+}else{
+  // some code
+  document.getElementById('websiteTitle3').style.display = 'none';
+}
+});
+
+var h4checkBox = document.getElementById('h4check');
+h4checkBox.addEventListener('change', () => {
+if (h4checkBox.checked) {
+  // change h target
+  document.getElementById('chosenHeader').innerHTML= 'h4';
+  document.getElementById('chosenHeaderCloser').innerHTML= 'h4';
+
+  // quick glow
+  setTimeout(function() {
+    document.getElementById('chosenHeader').classList.add('mat-cancel-color');
+    document.getElementById('chosenHeaderCloser').classList.add('mat-cancel-color');
+  },1);
+  // remove glow
+  document.getElementById('chosenHeader').classList.remove('mat-cancel-color');
+  document.getElementById('chosenHeaderCloser').classList.remove('mat-cancel-color');
+
+
+  // unshow all other headings
+  document.getElementById('websiteTitle').style.display = 'none';
+  document.getElementById('websiteTitle2').style.display = 'none';
+  document.getElementById('websiteTitle3').style.display = 'none';
+  document.getElementById('websiteTitle5').style.display = 'none';
+  document.getElementById('websiteTitle6').style.display = 'none';
+
+  // uncheck all other boxes
+  document.getElementById("h1check").checked = false;
+  document.getElementById("h2check").checked = false;
+  document.getElementById("h3check").checked = false;
+  document.getElementById("h5check").checked = false;
+  document.getElementById("h6check").checked = false;
+  // show h1 on webpage
+  document.getElementById('websiteTitle4').style.display = 'inline';
+}else{
+  // some code
+  document.getElementById('websiteTitle4').style.display = 'none';
+}
+});
+
+var h5checkBox = document.getElementById('h5check');
+h5checkBox.addEventListener('change', () => {
+if (h5checkBox.checked) {
+  // change h target
+  document.getElementById('chosenHeader').innerHTML= 'h5';
+  document.getElementById('chosenHeaderCloser').innerHTML= 'h5';
+
+  // quick glow
+  setTimeout(function() {
+    document.getElementById('chosenHeader').classList.add('mat-cancel-color');
+    document.getElementById('chosenHeaderCloser').classList.add('mat-cancel-color');
+  },1);
+  // remove glow
+  document.getElementById('chosenHeader').classList.remove('mat-cancel-color');
+  document.getElementById('chosenHeaderCloser').classList.remove('mat-cancel-color');
+
+  // unshow all other headings
+  document.getElementById('websiteTitle').style.display = 'none';
+  document.getElementById('websiteTitle2').style.display = 'none';
+  document.getElementById('websiteTitle3').style.display = 'none';
+  document.getElementById('websiteTitle4').style.display = 'none';
+  document.getElementById('websiteTitle6').style.display = 'none';
+
+  // uncheck all other boxes
+  document.getElementById("h1check").checked = false;
+  document.getElementById("h2check").checked = false;
+  document.getElementById("h3check").checked = false;
+  document.getElementById("h4check").checked = false;
+  document.getElementById("h6check").checked = false;
+  // show h1 on webpage
+  document.getElementById('websiteTitle5').style.display = 'inline';
+}else{
+  // some code
+  document.getElementById('websiteTitle5').style.display = 'none';
+}
+});
+
+var h6checkBox = document.getElementById('h6check');
+h6checkBox.addEventListener('change', () => {
+if (h6checkBox.checked) {
+  // change h target
+  document.getElementById('chosenHeader').innerHTML= 'h6';
+  document.getElementById('chosenHeaderCloser').innerHTML= 'h6';
+
+  // quick glow
+  setTimeout(function() {
+    document.getElementById('chosenHeader').classList.add('mat-cancel-color');
+    document.getElementById('chosenHeaderCloser').classList.add('mat-cancel-color');
+  },1);
+  // remove glow
+  document.getElementById('chosenHeader').classList.remove('mat-cancel-color');
+  document.getElementById('chosenHeaderCloser').classList.remove('mat-cancel-color');
+
+  // unshow all other headings
+  document.getElementById('websiteTitle').style.display = 'none';
+  document.getElementById('websiteTitle2').style.display = 'none';
+  document.getElementById('websiteTitle3').style.display = 'none';
+  document.getElementById('websiteTitle4').style.display = 'none';
+  document.getElementById('websiteTitle5').style.display = 'none';
+
+  // uncheck all other boxes
+  document.getElementById("h1check").checked = false;
+  document.getElementById("h2check").checked = false;
+  document.getElementById("h3check").checked = false;
+  document.getElementById("h4check").checked = false;
+  document.getElementById("h5check").checked = false;
+  // show h1 on webpage
+  document.getElementById('websiteTitle6').style.display = 'inline';
+}else{
+  // some code
+  document.getElementById('websiteTitle6').style.display = 'none';
+}
+});
 
   }
   else{
@@ -118,6 +356,15 @@ function submitTitleActivity(activity){
         document.getElementById("paragraphValue").innerHTML = usertext;
         document.getElementById("paragraphValue").style.color = highlightedColor;
         document.getElementById('paragraphCode').style.display = "inline";
+        // quick glow
+        setTimeout(function() {
+          document.getElementById('paragraphCode').classList.add('mat-cancel-color');
+          document.getElementById('paragraphCode').classList.add('mat-cancel-color');
+        },1);
+        // remove glow
+        document.getElementById('paragraphCode').classList.remove('mat-cancel-color');
+        document.getElementById('paragraphCode').classList.remove('mat-cancel-color');
+
         paragraphInputField.value = "";
         paragraphActivity = true;
       }
@@ -198,6 +445,14 @@ function submitFontColorActivity(activity){
         // change website paragraph and paragraph value to text in input field
         // show paragraph element on user's website
         document.getElementById('buttonHTMLCode').style.display = "inline";
+        // quick glow
+        setTimeout(function() {
+          document.getElementById('buttonHTMLCode').classList.add('mat-cancel-color');
+          document.getElementById('buttonHTMLCode').classList.add('mat-cancel-color');
+        },1);
+        // remove glow
+        document.getElementById('buttonHTMLCode').classList.remove('mat-cancel-color');
+        document.getElementById('buttonHTMLCode').classList.remove('mat-cancel-color');
         document.getElementById("buttonValue").innerHTML = text;
         document.getElementById('websiteButton').innerHTML = text;
         document.getElementById("buttonValue").style.color = highlightedColor;
@@ -235,6 +490,7 @@ function submitFontColorActivity(activity){
       document.getElementById('buttonBgValue').style.color = event.target.value;
         document.getElementById('websiteButton').style.backgroundColor = event.target.value;
     }
+    buttonStylingActivity = true;
 
 
     }
@@ -242,7 +498,16 @@ function submitFontColorActivity(activity){
       console.log("Did not complete acitivty");
     }
 }
+function submitButtonStyleActivity(){
+  if(buttonStylingActivity == true){
+    // change the submit button to now check for title acitivty completion
+    document.getElementById('button11').setAttribute('onclick','submitLinksActivity()');
+    document.getElementById('activityTitle').innerHTML = "Links <span style = 'color: #AFE24F'>&#60;button&#62;</span> HTML element is an interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology.";
+    //remove title acitivity
+    document.getElementById('buttonStylingActivity').style.display = "none";
+  }
 
+}
 
 
 // activate first color picker on start
