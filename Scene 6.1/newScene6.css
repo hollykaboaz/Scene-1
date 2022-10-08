@@ -16,9 +16,14 @@ body {
 #htmlConsoleTitle {
   position: fixed;
   top: 60px;
-  left:130px;
+  left:110px;
   font-size: 30px;
   color: white;
+  /* background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(90deg, rgba(117,43,255,1) 0%, rgba(0,212,255,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  filter: drop-shadow(5px 2px 15px black);
+
 }
 #cssConsoleTitle {
   position: fixed;
@@ -26,14 +31,18 @@ body {
   left:420px;
   font-size: 30px;
   color: white;
+  /* background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(90deg, rgba(117,43,255,1) 0%, rgba(0,212,255,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  filter: drop-shadow(5px 2px 15px black);
 }
 #HTMLWebbie{
   /*Bring to front*/
   z-index: 20;
   /*Positioning*/
   position: fixed;
-  bottom: 100px;
-  left: 60px;
+  bottom: 23px;
+  left: 30px;
   /* Resizing image */
   max-width:15%;
   height:auto;
@@ -43,8 +52,8 @@ body {
   z-index: 20;
   /*Positioning*/
   position: fixed;
-  bottom: 100px;
-  left: 350px;
+  bottom: 20px;
+  left: 380px;
   /* Resizing image */
   max-width:15%;
   height:auto;
@@ -53,13 +62,13 @@ body {
 #activityTitle{
   /*Positining */
   position: fixed;
-  top: 30px;
+  top: 10px;
   left: 600px;
   /* Sizing */
-  width: 580px;
+  width: 560px;
   height: 40px;
   /* Styling */
-  padding: 10px;
+  padding: 20px;
   background-color: rgba(0,0,0,0.5);
   text-align: center;
   color: white;
@@ -69,13 +78,13 @@ body {
 #activitySection {
   /* Positioning */
   position: fixed;
-  right: 10px;
-  bottom: 10px;
+  right: 30px;
+  bottom: 19px;
   /* Sizing */
   width: 110px;
-  height: 680px;
+  height: 734px;
   /* Styling */
-  padding: 50px;
+  padding: 30px;
   border-radius: 5px;
   background-color: rgba(0,0,0,0.5);
   text-align: center;
@@ -84,7 +93,7 @@ body {
 }
 .instructionTitle{
   position: fixed;
-  top: 710px;
+  bottom: 20px;
   left: 600px;
   width: 555px;
   height: 60px;
@@ -97,13 +106,13 @@ body {
 #console {
   /* Positioning */
   position: fixed;
-  left: 320px;
+  left: 310px;
   top: 100px;
   /* Sizing */
   width:225px;
   height: 551px;
   /* Styling */
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.7);
   /* Padding so when we add words they're not too close to edges */
   padding: 25px;
   /* Word wrap so when we add words inside console they dont overlap with div */
@@ -111,17 +120,18 @@ body {
   border-radius: 5px;
   color: white;
   font-size: 13px;
+  filter: drop-shadow(5px 2px 15px black);
 }
 #console2{
   /* Positioning */
   position: fixed;
-  left: 30px;
+  left: 20px;
   top: 100px;
   /* Sizing */
   width:225px;
   height: 551px;
   /* Styling */
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.7);
   /* Padding so when we add words they're not too close to edges */
   padding: 25px;
   /* Word wrap so when we add words inside console they dont overlap with div */
@@ -129,6 +139,7 @@ body {
   border-radius: 5px;
   color: white;
   font-size: 13px;
+  filter: drop-shadow(5px 2px 15px black);
 }
 
 #website {

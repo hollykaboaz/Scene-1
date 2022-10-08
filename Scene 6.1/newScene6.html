@@ -7,11 +7,11 @@
     <title></title>
   </head>
   <body onload="activateColorPicker()">
-    <img id = "HTMLWebbie" src="HTML Webbie.png" alt="">
-    <img id = "CSSWebbie" src="Asset 5.png" alt="">
+    <img  id = "HTMLWebbie" src="HTML Webbie.png" alt="">
+    <img  ondrop="dropColor(event)" ondragover="allowDrop(event)" id = "CSSWebbie" src="Asset 5.png" alt="">
     <div id="htmlConsoleTitle">HTML</div>
     <div id="cssConsoleTitle">CSS</div>
-    <div id = "activityTitle"> Adding a Background Color </div>
+    <div id = "activityTitle"> The <span style = "color: #afe24f"> body </span> selector selects the entire webspage<br> The <span style = "color: #afe24f">background-color</span> CSS property sets the background color of the selected element.</div>
     <div id="console" ondrop="dropColor(event)" ondragover="allowDrop(event)">
       <!-- CSS BODY SELECTOR -->
       <p id = "bodySelector" style = "display:none;"> body {</p>
@@ -61,7 +61,7 @@
       </div>
     </div>
     <img id = "bottomBorder" src = "bottomBorder.png"/>
-    <div class = "instructionTitle" id = "bg"> Directions: <br> <span style = "color: #AFE24F; ">DRAG </span>your desired background color to the correct webbie <br> Once you are happy with your website color click submit! </div>
+    <div class = "instructionTitle" id = "bg"> Directions: <br> <span style = "color: #AFE24F; ">DRAG and DROP </span>your desired background color to the CORRECT WEBBIE <br> Once you are happy with your website color click submit! </div>
     <div class = "instructionTitle" id = "title" style = "display: none;"> Directions: <br> <span style = "text-shadow: 2px 2px 5px #AFE24F;"> Type </span> in your desired website title and <span style = "color: #AFE24F; ">PRESS ENTER</span><br>  Once you are happy with your website title click submit! </div>
     <div class = "instructionTitle" id = "paragraph" style = "display: none;> Directions: <br> <span style = "color: #AFE24F; ">TYPE </span>in our desired paragraph in the text box <br> Once you are happy with your website color click submit! </div>
     <div id = "activitySection">
@@ -89,7 +89,7 @@
       <input style = "margin-left: -15px;" id = "ip" type="text">
     </div>
     <div style = "display: none;" id = "paragraphActivity" class="">
-      <p> Enter a paragraph [p] for your website: </p>
+      <p> Enter a short one sentence description for your website: </p>
       <input style = "margin-left: -15px;" id = "ip2" type="text" >
     </div>
     <div style = "display: none;" id = "fontColorActivity" class="">

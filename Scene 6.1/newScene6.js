@@ -55,7 +55,7 @@ function submitBgActivity(activity){
     console.log("here");
     // change the submit button to now check for title acitivty completion
     document.getElementById('button11').setAttribute('onclick','submitTitleActivity()');
-    document.getElementById('activityTitle').innerHTML = "Adding a Heading Title";
+    document.getElementById('activityTitle').innerHTML = "The <span style = 'color: #AFE24F'>&#60;h1&#62;</span> to <span style = 'color: #AFE24F;'>&#60;h6&#62;</span> HTML elements represent six levels of section headings. <span style = 'color: #AFE24F;'>&#60;h1&#62;</span> is the highest section level and <span style = 'color: #AFE24F;'>&#60;h6&#62;</span> is the lowest.";
     // remove bg activity instructions
     document.getElementById('bg').remove();
     //remove color choice acitivity
@@ -93,7 +93,7 @@ function submitTitleActivity(activity){
       console.log("Title Activity was completed");
       // change the submit button to now check for title acitivty completion
       document.getElementById('button11').setAttribute('onclick','submitParagraphActivity()');
-      document.getElementById('activityTitle').innerHTML = "Adding a Paragraph";
+      document.getElementById('activityTitle').innerHTML = "The <span style = 'color: #AFE24F'>&#60;p&#62;</span> HTML element represents a paragraph. ";
       // remove title instructions
       document.getElementById('title').remove();
       //remove title acitivity
@@ -172,7 +172,7 @@ function submitFontColorActivity(activity){
       console.log("Paragraph Activity was completed");
       // change the submit button to now check for title acitivty completion
       document.getElementById('button11').setAttribute('onclick','submitButtonStyleActivity()');
-      document.getElementById('activityTitle').innerHTML = "Styling a Button";
+      document.getElementById('activityTitle').innerHTML = "The <span style = 'color: #AFE24F'>&#60;button&#62;</span> HTML element is an interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology.";
       //remove title acitivity
       document.getElementById('fontColorActivity').style.display = "none";
       // // show paragraph acivity instructions
@@ -260,6 +260,7 @@ function activateColorPicker() {
       document.getElementById('bgColorValue').style.color = event.target.value;
       document.getElementById('bgColorAttritbute').style.display = "inline";
       document.getElementById('website').style.backgroundColor = event.target.value;
+      highlightedColor = event.target.value;
       backgroundActivity = true;
     }
 }
