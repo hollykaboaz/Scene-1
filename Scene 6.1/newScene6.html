@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="newScene6.css">
+    <script src="newScene6.js"></script>
+    <title></title>
+  </head>
+  <body onload="activateColorPicker()">
+    <img id = "HTMLWebbie" src="HTML Webbie.png" alt="">
+    <img id = "CSSWebbie" src="Asset 5.png" alt="">
+    <div id = "activityTitle"> Adding a Background Color </div>
+    <div id="console" ondrop="dropColor(event)" ondragover="allowDrop(event)">
+      <!-- CSS BODY SELECTOR -->
+      <p id = "bodySelector" style = "display:none;"> body {</p>
+      <p id = "bgColorAttritbute" style = "display:none;"> background-color : <span id = "bgColorValue"> color </span>;</p>
+      <p id= "closer" style = "display:none;" >}</p>
+      <div style = "display:none;" id = "titleColorCode">
+      <!--  CSS H1 SELECTOR -->
+      <p> h1 {<p>
+      <p>color: <span id = "titleColorValue" > color </span>;</p>
+      <p>}</p>
+      </div>
+
+      <!--  P SELECTOR -->
+      <div style = "display:none;" id = "paragraphColorCode">
+      <p> p {<p>
+      <p>color: <span id = "paragraphColorValue" > color </span>;</p>
+      <p>}</p>
+      </div>
+
+      <!--  BUTTON  SELECTOR -->
+      <div style = "display:none;" id = "buttonCode">
+      <p> button {<p>
+      <p id = "buttonBgCode" style = "display:none;">background-color: <span id = "buttonBgValue" > color </span>;</p>
+      <p id = "buttonBorderCode" style = "display:none;">border: 5px solid <span id = "buttonBorderValue" > black </span>;</p>
+      <p>}</p>
+      </div>
+
+    </div>
+    <div id="console2">
+      <p style = "display:none;"id = "titleCode">&#60;h1&#62; <span id = "titleValue" > title </span> &#60;/h1&#62;</p>
+      <p style = "display:none;" id = "paragraphCode"> <br> &#60;p&#62; <span id = "paragraphValue" > paragraph </span> &#60;/p&#62;</p>
+      <p style = "display:none;" id = "buttonHTMLCode"> &#60;button&#62; <span id = "buttonValue" > button text </span> &#60;button&#62;</p>
+    </div>
+    <div id ="website">
+      <div id ="websiteBgImage"></div>
+      <div id= "overlay"></div>
+      <div id = websiteContent>
+        <div style = "visibility:hidden;" class="topnav">
+          <a class="active" href="#home">Home</a>
+          <a href="#news">News</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+        </div>
+          <h1 style = "display:none;" id = "websiteTitle">Website Title </h1>
+          <p style = "display:none;" id = "websiteParagraph"> a short paragraph about website </p>
+          <a style = "display:none;" id = "websiteButton" href="" target="_blank">Button</a>
+      </div>
+    </div>
+    <img id = "bottomBorder" src = "bottomBorder.png"/>
+    <div class = "instructionTitle" id = "bg"> Directions: <br> <span style = "color: #AFE24F; ">DRAG </span>your desired background color to the correct webbie <br> Once you are happy with your website color click submit! </div>
+    <div class = "instructionTitle" id = "title" style = "display: none;"> Directions: <br> <span style = "text-shadow: 2px 2px 5px #AFE24F;"> Type </span> in your desired website title and <span style = "color: #AFE24F; ">PRESS ENTER</span><br>  Once you are happy with your website title click submit! </div>
+    <div class = "instructionTitle" id = "paragraph" style = "display: none;> Directions: <br> <span style = "color: #AFE24F; ">TYPE </span>in our desired paragraph in the text box <br> Once you are happy with your website color click submit! </div>
+    <div id = "activitySection">
+      <div id = "bgActivity"class = "backgroundColorActivity">
+        <p> Choose a background color </p>
+        <div id = "button1" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+        <div id = "button2" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+        <div id = "button3" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+        <div id = "button4" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+        <div id = "button5" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+        <div id = "button6" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+        <div id = "button7" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+        <div id = "button8" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+        <div id = "button9" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+        <div id = "button10"draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
+        <label for="colorpicker">Pick your own background color: </label>
+        <br>
+        <br>
+        <input id = "ipbg" type="color" id="colorpicker" value="#0000ff">
+
+
+    </div>
+    <div style = "display: none;" id = "titleActivity" class="">
+      <p> Enter a title [h1] for your website: </p>
+      <input style = "margin-left: -15px;" id = "ip" type="text">
+    </div>
+    <div style = "display: none;" id = "paragraphActivity" class="">
+      <p> Enter a paragraph [p] for your website: </p>
+      <input style = "margin-left: -15px;" id = "ip2" type="text" >
+    </div>
+    <div style = "display: none;" id = "fontColorActivity" class="">
+      <label for="colorpicker">Pick a font color for your title:</label>
+      <br>
+      <br>
+      <br>
+      <input id = "ip3" type="color" id="colorpicker" value="#0000ff">
+      <br><br><br>
+      <label for="colorpicker">Pick a font color for your paragraph:</label>
+      <br><br><br>
+      <input id = "ip4" type="color" id="colorpicker" value="#0000ff">
+    </div>
+    <div style = "display: none;" id = "buttonStylingActivity" class="">
+      <p> Enter some text for your button </p>
+      <input style = "margin-left: -15px;" id = "ip10" type="text">
+      <input type="checkbox" id="border"/>
+      <br><br>
+      <label for="border">Add a border</label>
+      <br><br><br>
+      <label for="colorpicker">Pick color for your border:</label>
+      <br><br>
+      <input id = "ip5" type="color" id="colorpicker" value="#0000ff">
+      <br><br>
+      <label for="colorpicker2">Pick color for your button:</label>
+      <br><br>
+      <input id = "ip6" type="color" id="colorpicker2" value="#0000ff">
+    </div>
+
+
+    <button onclick="submitBgActivity()" id = "button11"> SUBMIT MY CODE </button>
+    </div>
+
+
+  </body>
+</html>

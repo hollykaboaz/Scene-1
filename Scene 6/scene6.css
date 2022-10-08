@@ -96,6 +96,7 @@ body {
 #button8{background-color: #CC88F9}
 #button9{background-color: #873CF4}
 #button10{background-color: #353839}
+#button11{background-color: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);}
 
 
 #websiteTitle{

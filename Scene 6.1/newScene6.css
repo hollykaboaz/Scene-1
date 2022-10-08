@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans&display=swap');
+/* disables scrolling */
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+body {
+  /* Image */
+  background-image: url("2003.jpg") ;
+  /* Sizing */
+  width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  /* Font Styling for entire page */
+  font-family: 'Amatic SC', sans-serif;
+}
+#HTMLWebbie{
+  /*Bring to front*/
+  z-index: 20;
+  /*Positioning*/
+  position: fixed;
+  bottom: 100px;
+  left: 60px;
+  /* Resizing image */
+  max-width:15%;
+  height:auto;
+}
+#CSSWebbie {
+  /*Bring to front*/
+  z-index: 20;
+  /*Positioning*/
+  position: fixed;
+  bottom: 100px;
+  left: 350px;
+  /* Resizing image */
+  max-width:15%;
+  height:auto;
+}
+
+#activityTitle{
+  /*Positining */
+  position: fixed;
+  top: 30px;
+  left: 600px;
+  /* Sizing */
+  width: 580px;
+  height: 40px;
+  /* Styling */
+  padding: 10px;
+  background-color: rgba(0,0,0,0.5);
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+}
+
+#activitySection {
+  /* Positioning */
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  /* Sizing */
+  width: 110px;
+  height: 680px;
+  /* Styling */
+  padding: 50px;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.5);
+  text-align: center;
+  color: white;
+
+}
+.instructionTitle{
+  position: fixed;
+  top: 720px;
+  left: 600px;
+  width: 555px;
+  height: 70px;
+  padding: 10px;
+  background-color: rgba(0,0,0,0.5);
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+}
+#console {
+  /* Positioning */
+  position: fixed;
+  left: 320px;
+  top: 100px;
+  /* Sizing */
+  width:225px;
+  height: 551px;
+  /* Styling */
+  background-color: rgba(0,0,0,0.5);
+  /* Padding so when we add words they're not too close to edges */
+  padding: 25px;
+  /* Word wrap so when we add words inside console they dont overlap with div */
+  word-wrap: break-word;
+  border-radius: 5px;
+  color: white;
+  font-size: 13px;
+}
+#console2{
+  /* Positioning */
+  position: fixed;
+  left: 30px;
+  top: 100px;
+  /* Sizing */
+  width:225px;
+  height: 551px;
+  /* Styling */
+  background-color: rgba(0,0,0,0.5);
+  /* Padding so when we add words they're not too close to edges */
+  padding: 25px;
+  /* Word wrap so when we add words inside console they dont overlap with div */
+  word-wrap: break-word;
+  border-radius: 5px;
+  color: white;
+  font-size: 13px;
+}
+
+#website {
+  font-family: 'Open Sans', sans-serif;
+  /* Positioning */
+  left: 600px;
+  top: 100px;
+  position: fixed;
+  /* Sizing */
+  width:600px;
+  height: 600px;
+  /* Styling */
+  background-color: black;
+  color: white;
+}
+
+#bottomBorder {
+  /* Positioning */
+  position: fixed;
+  left: 599px;
+  top: 502px;
+  /* Sizing */
+  width: 602.5px;
+}
+
+/* -------------- Inside Website --------------*/
+#overlay {
+  z-index: -1;
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  opacity: 30%;
+  /* background-color: red; */
+}
+
+#websiteBgImage{
+  z-index: -1;
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  /* background-image: url("https://images-prod.healthline.com/hlcmsresource/images/AN_images/health-benefits-of-apples-1296x728-feature.jpg"); */
+  background-size: cover;
+}
+
+#websiteTitle{
+  top: 100px;
+}
+
+#websiteContent{
+  text-align: center;
+}
+#websiteParagraph{
+  margin-bottom: 45px;
+}
+#websiteButton{
+  z-index: 20;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 50px;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+}
+/* Navigation Bar */
+.topnav {
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color:rgba(0,0,0,0.5);
+  color: white;
+}
+.colorButton{
+  position: relative;
+  margin-bottom: 10px;
+  width: 100px;
+  height: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#button1{background-color: #58A6C3;}
+#button2{background-color: #7DE0E0;}
+#button3{background-color: #AFE24F;}
+#button4{background-color: #FBF168;}
+#button5{background-color: #F3AF3D;}
+#button6{background-color: #E7817A;}
+#button7{background-color: #DE5CAB;}
+#button8{background-color: #CC88F9;}
+#button9{background-color: #873CF4;}
+#button10{background-color: #353839;}
+#button11{
+  /* positioning */
+  position: fixed;
+  bottom:20px;
+  left: 240px;
+  border: solid 3px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(90deg, rgba(117,43,255,1) 0%, rgba(0,212,255,1) 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #20202a inset;
+  transition: none!important;
+  color: #fff;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 30px;
+}
