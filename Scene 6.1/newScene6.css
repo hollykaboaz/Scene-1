@@ -10,13 +10,13 @@ body {
   min-height: 100vh;
   background-size: cover;
   /* Font Styling for entire page */
-  font-family: 'Amatic SC', sans-serif;
+  font-family: sans-serif;
 }
 
 #htmlConsoleTitle {
   position: fixed;
   top: 60px;
-  left:120px;
+  left:130px;
   font-size: 30px;
   color: white;
 }
