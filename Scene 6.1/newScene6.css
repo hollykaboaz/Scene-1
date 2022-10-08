@@ -41,7 +41,7 @@ body {
   z-index: 20;
   /*Positioning*/
   position: fixed;
-  bottom: 23px;
+  bottom: 2px;
   left: 30px;
   /* Resizing image */
   max-width:15%;
@@ -49,10 +49,10 @@ body {
 }
 #CSSWebbie {
   /*Bring to front*/
-  z-index: 20;
+  z-index: 15;
   /*Positioning*/
   position: fixed;
-  bottom: 20px;
+  bottom: 1px;
   left: 380px;
   /* Resizing image */
   max-width:15%;

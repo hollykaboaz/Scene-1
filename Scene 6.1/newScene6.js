@@ -381,7 +381,7 @@ function submitParagraphActivity(activity){
       console.log("Paragraph Activity was completed");
       // change the submit button to now check for title acitivty completion
       document.getElementById('button11').setAttribute('onclick','submitFontColorActivity()');
-      document.getElementById('activityTitle').innerHTML = "The  <span style = 'color: #AFE24F'>color</span> property specifies the color of text";
+      document.getElementById('activityTitle').innerHTML = "The  <span style = 'color: #AFE24F'>color</span> property specifies the color of text. Colors can be represented by a combination of letters and numbers #A1B2C3 this called a HEX CODE ";
       // remove title instructions
       document.getElementById('paragraph').remove();
       //remove title acitivity
