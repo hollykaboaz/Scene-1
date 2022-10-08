@@ -254,6 +254,8 @@ function activateColorPicker() {
       website = document.getElementById('website');
       website.style.backgroundColor = event.target.value;
       // Change and show background color code
+      document.getElementById('bodySelector').style.display = "block";
+      document.getElementById('closer').style.display = "block";
       document.getElementById('bgColorValue').innerHTML = event.target.value;
       document.getElementById('bgColorValue').style.color = event.target.value;
       document.getElementById('bgColorAttritbute').style.display = "inline";

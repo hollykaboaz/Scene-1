@@ -84,10 +84,10 @@ body {
 }
 .instructionTitle{
   position: fixed;
-  top: 720px;
+  top: 710px;
   left: 600px;
   width: 555px;
-  height: 70px;
+  height: 60px;
   padding: 10px;
   background-color: rgba(0,0,0,0.5);
   text-align: center;
