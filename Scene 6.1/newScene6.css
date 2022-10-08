@@ -12,6 +12,21 @@ body {
   /* Font Styling for entire page */
   font-family: 'Amatic SC', sans-serif;
 }
+
+#htmlConsoleTitle {
+  position: fixed;
+  top: 60px;
+  left:120px;
+  font-size: 30px;
+  color: white;
+}
+#cssConsoleTitle {
+  position: fixed;
+  top: 60px;
+  left:420px;
+  font-size: 30px;
+  color: white;
+}
 #HTMLWebbie{
   /*Bring to front*/
   z-index: 20;
