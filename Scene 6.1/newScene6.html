@@ -7,11 +7,14 @@
     <title></title>
   </head>
   <body onload="activateColorPicker()">
+
+    <audio style = "display:none;" src="music.mp3" controls></audio>
+    <embed style = "display:none;" src="music.mp3" loop="true" autostart="true" width="2" height="0">
     <img  id = "HTMLWebbie" src="HTML Webbie.png" alt="">
     <img  ondrop="dropColor(event)" ondragover="allowDrop(event)" id = "CSSWebbie" src="Asset 5.png" alt="">
     <div id="htmlConsoleTitle">HTML</div>
     <div id="cssConsoleTitle">CSS</div>
-    <div id = "activityTitle"> The <span style = "color: #afe24f"> body </span> selector selects the entire webspage<br> The <span style = "color: #afe24f">background-color</span> CSS property sets the background color of the selected element.</div>
+    <div id = "activityTitle"> The <span style = "color: #afe24f"> body </span> selector selects the entire webpage. The <span style = "color: #afe24f">background-color</span> CSS property sets the background color of the selected element.</div>
     <div id="console" ondrop="dropColor(event)" ondragover="allowDrop(event)">
       <!-- CSS BODY SELECTOR -->
       <p id = "bodySelector" style = "display:none;"> body {</p>

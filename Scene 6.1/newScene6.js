@@ -247,6 +247,7 @@ function submitFontColorActivity(activity){
 
 // activate first color picker on start
 function activateColorPicker() {
+
     var backgroundColorInput = document.getElementById('ipbg');
     backgroundColorInput.addEventListener("input", colorPickerBg, false);
     function colorPickerBg(event) {
@@ -264,3 +265,11 @@ function activateColorPicker() {
       backgroundActivity = true;
     }
 }
+
+window.addEventListener("DOMContentLoaded", event => {
+  const audio = document.querySelector("audio");
+  audio.volume = 0.1;
+  document.body.addEventListener("mousemove", function () {
+    audio.play()
+});
+});
