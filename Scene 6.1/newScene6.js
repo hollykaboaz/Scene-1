@@ -62,7 +62,7 @@ function submitBgActivity(activity){
     console.log("here");
     // change the submit button to now check for title acitivty completion
     document.getElementById('button11').setAttribute('onclick','submitTitleActivity()');
-    document.getElementById('activityTitle').innerHTML = "The <span style = 'color: #AFE24F'>&#60;h1&#62;</span> to <span style = 'color: #AFE24F;'>&#60;h6&#62;</span> HTML elements represent six levels of section headings. <span style = 'color: #AFE24F;'>&#60;h1&#62;</span> is the highest section level and <span style = 'color: #AFE24F;'>&#60;h6&#62;</span> is the lowest.";
+    document.getElementById('activityTitle').innerHTML = "The <span style = 'color: #AFE24F'>&#60;h1&#62;</span> to <span style = 'color: #AFE24F;'>&#60;h6&#62;</span> HTML elements represent six levels of section headings. <span style = 'color: #AFE24F;'>&#60;h1&#62;</span> is the biggest size and <span style = 'color: #AFE24F;'>&#60;h6&#62;</span> is the smallest size.";
     // remove bg activity instructions
     document.getElementById('bg').remove();
     //remove color choice acitivity
@@ -381,7 +381,7 @@ function submitParagraphActivity(activity){
       console.log("Paragraph Activity was completed");
       // change the submit button to now check for title acitivty completion
       document.getElementById('button11').setAttribute('onclick','submitFontColorActivity()');
-      document.getElementById('activityTitle').innerHTML = "Adding a Font Color";
+      document.getElementById('activityTitle').innerHTML = "The  <span style = 'color: #AFE24F'>color</span> property specifies the color of text";
       // remove title instructions
       document.getElementById('paragraph').remove();
       //remove title acitivity
@@ -502,9 +502,15 @@ function submitButtonStyleActivity(){
   if(buttonStylingActivity == true){
     // change the submit button to now check for title acitivty completion
     document.getElementById('button11').setAttribute('onclick','submitLinksActivity()');
-    document.getElementById('activityTitle').innerHTML = "Links <span style = 'color: #AFE24F'>&#60;button&#62;</span> HTML element is an interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology.";
-    //remove title acitivity
+    document.getElementById('activityTitle').innerHTML = "The <span style = 'color: #AFE24F'>&#60;a&#62;</span> with its href attribute, can create a link to another web page, a file and more.";
+    //remove previous acitivity
     document.getElementById('buttonStylingActivity').style.display = "none";
+    // show links actitvity
+    document.getElementById('linksActivity').style.display = "block";
+    // show navbar
+    document.getElementById('nav').style.visibility = "visible";
+    // show isntructions
+    document.getElementById('links').style.display = "block";
   }
 
 }

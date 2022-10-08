@@ -52,11 +52,11 @@
       <div id ="websiteBgImage"></div>
       <div id= "overlay"></div>
       <div id = websiteContent>
-        <div style = "visibility:hidden;" class="topnav">
-          <a class="active" href="#home">Home</a>
-          <a href="#news">News</a>
-          <a href="#contact">Contact</a>
-          <a href="#about">About</a>
+        <div id = "nav" style = "visibility:hidden;" class="topnav">
+          <a class="active" href="#home">Link 1</a>
+          <a href="#news">Link 2</a>
+          <a href="#contact">Link 3</a>
+          <a href="#about">Link 4</a>
         </div>
           <h1 style = "display:none;" id = "websiteTitle"> </h1>
           <h2 style = "display:none;" id = "websiteTitle2"> </h2>
@@ -71,7 +71,8 @@
     <img id = "bottomBorder" src = "bottomBorder.png"/>
     <div class = "instructionTitle" id = "bg"> Directions: <br> <span style = "color: #AFE24F; ">DRAG and DROP </span>your desired background color to the CORRECT WEBBIE <br> Once you are happy with your website color click submit! </div>
     <div class = "instructionTitle" id = "title" style = "display: none;"> Directions: <br> <span style = "text-shadow: 2px 2px 5px #AFE24F;"> Type </span> in your desired website title and <span style = "color: #AFE24F; ">PRESS ENTER</span><br>  Once you are happy with your website title click submit! </div>
-    <div class = "instructionTitle" id = "paragraph" style = "display: none;> Directions: <br> <span style = "color: #AFE24F; ">TYPE </span>in our desired paragraph in the text box <br> Once you are happy with your website color click submit! </div>
+    <div class = "instructionTitle" id = "paragraph" style = "display: none;"> Directions: <br> <span style = "color: #AFE24F; ">TYPE </span>in our desired paragraph in the text box <br> Once you are happy with your website color click submit! </div>
+    <div class = "instructionTitle" id = "links" style = "display: none;"> Directions: <br> <span style = "color: #AFE24F; ">COPY AND PASTE </span> 4 links in the  following boxes. When we click these tabs they will direct us to that page </div>
     <div id = "activitySection">
       <div id = "bgActivity"class = "backgroundColorActivity">
         <p> Choose a background color </p>
@@ -95,7 +96,7 @@
     <div style = "display: none;" id = "titleActivity" class="">
       <p> Step 1: Enter a title [h1] for your website: </p>
       <br>
-      <input style = "margin-left: -15px;" id = "ip" type="text">
+      <input style = "margin-left: -15px;" id = "ip" type="text" placeholder = "i.e My First Website ">
       <p> Step 2: Choose a heading size </p>
       <br>
       <input type="checkbox" id="h1check"/>
@@ -118,7 +119,7 @@
     </div>
     <div style = "display: none;" id = "paragraphActivity" class="">
       <p> Enter a short one sentence description for your website: </p>
-      <input style = "margin-left: -15px;" id = "ip2" type="text" >
+      <input style = "margin-left: -15px;" id = "ip2" type="text" placeholder = "enter a short description" >
     </div>
     <div style = "display: none;" id = "fontColorActivity" class="">
       <label for="colorpicker">Pick a font color for your title:</label>
@@ -133,7 +134,7 @@
     </div>
     <div style = "display: none;" id = "buttonStylingActivity" class="">
       <p> Enter some text for your button </p>
-      <input style = "margin-left: -15px;" id = "ip10" type="text">
+      <input style = "margin-left: -15px;" id = "ip10" type="text" placeholder = "words inside of button">
       <br><br>
       <input type="checkbox" id="border"/>
       <label for="border">Add a border</label>
@@ -145,6 +146,43 @@
       <label for="colorpicker2">Pick color for your button:</label>
       <br><br>
       <input id = "ip6" type="color" id="colorpicker2" value="#0000ff">
+    </div>
+    <div style = "display: none;" id = "linksActivity" class="">
+      <p> Link 1 Name </p>
+      <br>
+      <input style = "margin-left: -15px;" id = "link1text" type="text" placeholder = "i.e Home">
+      <p> Link 1 URL </p>
+      <br>
+      <input style = "margin-left: -15px;" id = "link1url" type="text" placeholder = "paste a link here">
+      <br>
+
+      <p> Link 2 Name </p>
+      <br>
+      <input style = "margin-left: -15px;" id = "link2text" type="text" placeholder = "i.e Contact">
+      <p> Link 2 URL </p>
+      <br>
+      <input style = "margin-left: -15px;" id = "link2url" type="text" placeholder = "paste a link here">
+      <br>
+
+      <p> Link 3 Name </p>
+      <br>
+      <input style = "margin-left: -15px;" id = "link3text" type="text" placeholder = "i.e About">
+      <p> Link 3 URL </p>
+      <br>
+      <input style = "margin-left: -15px;" id = "link3url" type="text" placeholder = "paste a link here">
+      <br>
+
+
+      <p> Link 4 Name </p>
+      <br>
+      <input style = "margin-left: -15px;" id = "link4text" type="text" placeholder = "i.e News">
+      <p> Link 4 URL </p>
+      <br>
+      <input style = "margin-left: -15px;" id = "link4url" type="text" placeholder = "paste a link here">
+      <br>
+
+
+
     </div>
 
 
