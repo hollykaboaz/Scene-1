@@ -197,7 +197,7 @@ function submitFontColorActivity(activity){
         event.preventDefault();
         // change website paragraph and paragraph value to text in input field
         // show paragraph element on user's website
-        document.getElementById('buttonHTMLCode').style.display = "block";
+        document.getElementById('buttonHTMLCode').style.display = "inline";
         document.getElementById("buttonValue").innerHTML = text;
         document.getElementById('websiteButton').innerHTML = text;
         document.getElementById("buttonValue").style.color = highlightedColor;
@@ -209,7 +209,7 @@ function submitFontColorActivity(activity){
       border.addEventListener('change', () => {
       if (border.checked) {
         document.getElementById('websiteButton').style.border = '5px solid black';
-        document.getElementById('buttonBorderCode').style.display = "block";
+        document.getElementById('buttonBorderCode').style.display = "inline";
       }else{
         document.getElementById('websiteButton').style.border = '';
         document.getElementById('buttonBorderCode').style.display = "none";
