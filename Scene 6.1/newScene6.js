@@ -608,7 +608,7 @@ function submitButtonStyleActivity(){
 
 
 }
-
+}
 
 // activate first color picker on start
 function activateColorPicker() {
