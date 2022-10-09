@@ -378,6 +378,8 @@ function submitTitleActivity(activity){
 }
 function submitParagraphActivity(activity){
     if(paragraphActivity == true){
+
+
       console.log("Paragraph Activity was completed");
       // change the submit button to now check for title acitivty completion
       document.getElementById('button11').setAttribute('onclick','submitFontColorActivity()');
@@ -409,6 +411,8 @@ function submitParagraphActivity(activity){
           document.getElementById('paragraphColorValue').style.color = event.target.value;
           paragraphColorActivity = true;
       }
+      paragraphColorActivity = true;
+      titleColorActivity = true;
     }
     else{
       console.log("Did not complete acitivty");
@@ -511,7 +515,97 @@ function submitButtonStyleActivity(){
     document.getElementById('nav').style.visibility = "visible";
     // show isntructions
     document.getElementById('links').style.display = "block";
+    // getting title input field and setting
+    var link1inputField = document.getElementById('link1text');
+    console.log(link1inputField);
+    link1inputField.addEventListener("keypress", function(event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // change website title and title value to text in input field
+      document.getElementById('link1Code').style.display = "inline";
+      document.getElementById("link1Value").innerHTML = link1inputField.value;
+      document.getElementById("websitelink1").innerHTML = link1inputField.value;
+      document.getElementById("link1Value").style.color = highlightedColor;
+      // quick glow
+      setTimeout(function() {
+        document.getElementById('link1Code').classList.add('mat-cancel-color');
+      },1);
+      // remove glow
+      document.getElementById('link1Code').classList.remove('mat-cancel-color');
+      link1inputField.value = "";
+    }
+  });
+    // getting title input field and setting
+    var link2inputField = document.getElementById('link2text');
+    console.log(link2inputField);
+    link2inputField.addEventListener("keypress", function(event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // change website title and title value to text in input field
+      document.getElementById('link2Code').style.display = "inline";
+      document.getElementById("link2Value").innerHTML = link2inputField.value;
+      document.getElementById("websitelink2").innerHTML = link2inputField.value;
+      document.getElementById("link2Value").style.color = highlightedColor;
+      // quick glow
+      setTimeout(function() {
+        document.getElementById('link2Code').classList.add('mat-cancel-color');
+      },1);
+      // remove glow
+      document.getElementById('link2Code').classList.remove('mat-cancel-color');
+      link2inputField.value = "";
+    }
+    });
+
+    // getting title input field and setting
+    var link3inputField = document.getElementById('link3text');
+    console.log(link3inputField);
+    link3inputField.addEventListener("keypress", function(event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // change website title and title value to text in input field
+      document.getElementById('link3Code').style.display = "inline";
+      document.getElementById("link3Value").innerHTML = link3inputField.value;
+      document.getElementById("websitelink3").innerHTML = link3inputField.value;
+      document.getElementById("link3Value").style.color = highlightedColor;
+      // quick glow
+      setTimeout(function() {
+        document.getElementById('link3Code').classList.add('mat-cancel-color');
+      },1);
+      // remove glow
+      document.getElementById('link3Code').classList.remove('mat-cancel-color');
+      link3inputField.value = "";
+    }
+  });
+
+  // getting title input field and setting
+  var link4inputField = document.getElementById('link4text');
+  console.log(link4inputField);
+  link4inputField.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // change website title and title value to text in input field
+    document.getElementById('link4Code').style.display = "inline";
+    document.getElementById("link4Value").innerHTML = link4inputField.value;
+    document.getElementById("websitelink4").innerHTML = link4inputField.value;
+    document.getElementById("link4Value").style.color = highlightedColor;
+    // quick glow
+    setTimeout(function() {
+      document.getElementById('link4Code').classList.add('mat-cancel-color');
+    },1);
+    // remove glow
+    document.getElementById('link4Code').classList.remove('mat-cancel-color');
+    link4inputField.value = "";
   }
+});
+
 
 }
 
@@ -540,7 +634,5 @@ function activateColorPicker() {
 window.addEventListener("DOMContentLoaded", event => {
   const audio = document.querySelector("audio");
   audio.volume = 0.1;
-  document.body.addEventListener("mousemove", function () {
-    audio.play()
-});
+  document.body.addEventListener("mousemove", function () {audio.play()});
 });
