@@ -6,6 +6,7 @@ titleColorActivity = false;
 paragraphColorActivity = false;
 buttonStylingActivity = false;
 linksActivity = false;
+backgroundImageActivity = false;
 // The function is called  when an element is being dragged over the console
 function allowDrop(ev) {
   // prevent page any default effects
@@ -720,6 +721,62 @@ if (event.key === "Enter") {
 });
 
 }
+}
+function submitLinksActivity(){
+  // make sure previous acitivty was completed
+  if(linksActivity == true){
+    // change the submit button to now check for title acitivty completion
+    document.getElementById('button11').setAttribute('onclick','completed()');
+    document.getElementById('activityTitle').innerHTML = "The <span style = 'color: #AFE24F'>background-image</span> CSS property sets one or more background images on an element.";
+    //remove previous acitivity
+    document.getElementById('linksActivity').style.display = "none";
+    // remove previous acitivty instructions
+    document.getElementById('links').style.display = "none";
+    // show links actitvity
+    document.getElementById('backgroundImageActivity').style.display = "block";
+    // show isntructions
+    document.getElementById('backgroundImageInstructions').style.display = "block";
+    // get link 1 field
+    var bgurl = document.getElementById('bgurl');
+    bgurl.addEventListener("keypress", function(event) {
+    // If the user presses the "Enter" key on the keyboard while in this field
+    if (event.key === "Enter") {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // change href link and href value to text in input field
+      // style color
+      document.getElementById("bgImageCode").style.display = "block";
+      // put link in console
+      document.getElementById("bgImageURL").innerHTML = "<em><span style = 'color: #AFE24F'>your image adress here</span></em>";
+      // show link
+      document.getElementById('bgurl').style.display = "inline";
+      // change href to input fields value
+      document.getElementById("websiteBgImage").style.backgroundImage = "url('" + bgurl.value + "')";
+      console.log('url("' + bgurl + '")');
+
+      // quick glow
+      setTimeout(function() {
+        document.getElementById('bgImageCode').classList.add('mat-cancel-color');
+      },1);
+      // remove glow
+      document.getElementById('bgImageCode').classList.remove('mat-cancel-color');
+      bgurl.value = "";
+      backgroundImageActivity = true;
+    }
+  });
+
+  }
+}
+function completed(){
+  if(backgroundImageActivity == true){
+    window.alert("WAY TO GO!!!! YOU DID IT");
+    document.getElementById('activityTitle').innerHTML = "The <span style = 'color: #AFE24F'>&#60;CONGRATULATIONS!</span> YOU HAVE COMPLETED BUILDING YOUR FIRST WEBSITE!!!";
+    //remove previous acitivity
+    document.getElementById('backgroundImageActivity').style.display = "none";
+    // show isntructions
+    document.getElementById('backgroundImageInstructions').style.display = "none";
+}
+
 }
 
 // activate first color picker on start

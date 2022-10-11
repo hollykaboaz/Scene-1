@@ -18,6 +18,7 @@
       <!-- CSS BODY SELECTOR -->
       <p id = "bodySelector" style = "display:none;"> body {</p>
       <p id = "bgColorAttritbute" style = "display:none;"> background-color : <span id = "bgColorValue"> color </span>;</p>
+      <p id ="bgImageCode" style = "display:none;">background-image: url('<span id = bgImageURL> </span>'); </p>
       <p id= "closer" style = "display:none;" >}</p>
       <div style = "display:none;" id = "titleColorCode">
       <!--  CSS H1 SELECTOR -->
@@ -77,6 +78,8 @@
     <div class = "instructionTitle" id = "title" style = "display: none;"> Directions: <br> <span style = "text-shadow: 2px 2px 5px #AFE24F;"> Type </span> in your desired website title and <span style = "color: #AFE24F; ">PRESS ENTER</span><br>  Once you are happy with your website title click submit! </div>
     <div class = "instructionTitle" id = "paragraph" style = "display: none;"> Directions: <br> <span style = "color: #AFE24F; ">TYPE </span>in our desired paragraph in the text box <br> Once you are happy with your website color click submit! </div>
     <div class = "instructionTitle" id = "links" style = "display: none;"> Directions: <br> <span style = "color: #AFE24F; ">COPY AND PASTE </span> 4 links in the  following boxes. When we click these tabs they will direct us to that page </div>
+    <div class = "instructionTitle" id = "backgroundImageInstructions" style = "display: none;"> Directions: <br> <span style = "color: #AFE24F; ">COPY AND PASTE </span> the image address of your desired background image in the box </div>
+
     <div id = "activitySection">
       <div id = "bgActivity"class = "backgroundColorActivity">
         <p> Choose a background color </p>
@@ -167,7 +170,7 @@
       <p> Link 4 Name </p>
       <br>
       <input style = "margin-left: -15px;" id = "link4text" type="text" placeholder = "i.e News">
-      
+
       <p> Link 1 URL </p>
       <br>
       <input style = "margin-left: -15px;" id = "link1url" type="text" placeholder = "paste a link here">
@@ -188,7 +191,15 @@
       <input style = "margin-left: -15px;" id = "link4url" type="text" placeholder = "paste a link here">
       <br>
 
+    </div>
 
+    <div style = "display: none" id= "backgroundImageActivity">
+      <p> Step 1: Find an image you link on <span style = "color: #AFE24F">Google Images </span> </p>
+      <p> Step 2: Right click the image and select <span style = "color: #AFE24F"> 'Copy Image Address"</span> </p>
+      <p> Step 3: Paste the adress here: </p>
+      <br>
+      <input style = "margin-left: -15px;" id = "bgurl" type="text" placeholder = "paste image address">
+      <br>
 
     </div>
 
