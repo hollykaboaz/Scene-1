@@ -606,6 +606,117 @@ function submitButtonStyleActivity(){
   }
 });
 
+  // get link 1 field
+  var link1urlfield = document.getElementById('link1url');
+  link1urlfield.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard while in this field
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // change href link and href value to text in input field
+    // style color
+    document.getElementById("url1").style.color = highlightedColor;
+    // put link in console
+    document.getElementById("url1").innerHTML = "https://" + link1urlfield.value;
+    // show link
+    document.getElementById('url1').style.display = "inline";
+    // change href to input fields value
+    document.getElementById("websitelink1").href = "https://" + link1urlfield.value;
+
+
+    // quick glow
+    setTimeout(function() {
+      document.getElementById('url1').classList.add('mat-cancel-color');
+    },1);
+    // remove glow
+    document.getElementById('url1').classList.remove('mat-cancel-color');
+    link1urlfield.value = "";
+  }
+});
+
+// get link 2 field
+var link2urlfield = document.getElementById('link2url');
+link2urlfield.addEventListener("keypress", function(event) {
+// If the user presses the "Enter" key on the keyboard while in this field
+if (event.key === "Enter") {
+  // Cancel the default action, if needed
+  event.preventDefault();
+  // change href link and href value to text in input field
+  // style color
+  document.getElementById("url2").style.color = highlightedColor;
+  // put link in console
+  document.getElementById("url2").innerHTML = "https://" + link2urlfield.value;
+  // show link
+  document.getElementById('url2').style.display = "inline";
+  // change href to input fields value
+  document.getElementById("websitelink2").href = "https://" + link2urlfield.value;
+
+
+  // quick glow
+  setTimeout(function() {
+    document.getElementById('url2').classList.add('mat-cancel-color');
+  },1);
+  // remove glow
+  document.getElementById('url1').classList.remove('mat-cancel-color');
+  link2urlfield.value = "";
+}
+});
+
+// get link 2 field
+var link3urlfield = document.getElementById('link3url');
+link3urlfield.addEventListener("keypress", function(event) {
+// If the user presses the "Enter" key on the keyboard while in this field
+if (event.key === "Enter") {
+  // Cancel the default action, if needed
+  event.preventDefault();
+  // change href link and href value to text in input field
+  // style color
+  document.getElementById("url3").style.color = highlightedColor;
+  // put link in console
+  document.getElementById("url3").innerHTML = "https://" + link3urlfield.value;
+  // show link
+  document.getElementById('url3').style.display = "inline";
+  // change href to input fields value
+  document.getElementById("websitelink3").href = "https://" + link3urlfield.value;
+
+
+  // quick glow
+  setTimeout(function() {
+    document.getElementById('url3').classList.add('mat-cancel-color');
+  },1);
+  // remove glow
+  document.getElementById('url1').classList.remove('mat-cancel-color');
+  link3urlfield.value = "";
+}
+});
+
+// get link 2 field
+var link4urlfield = document.getElementById('link4url');
+link4urlfield.addEventListener("keypress", function(event) {
+// If the user presses the "Enter" key on the keyboard while in this field
+if (event.key === "Enter") {
+  // Cancel the default action, if needed
+  event.preventDefault();
+  // change href link and href value to text in input field
+  // style color
+  document.getElementById("url4").style.color = highlightedColor;
+  // put link in console
+  document.getElementById("url4").innerHTML = "https://" + link4urlfield.value;
+  // show link
+  document.getElementById('url4').style.display = "inline";
+  // change href to input fields value
+  document.getElementById("websitelink4").href = "https://" + link4urlfield.value;
+
+
+  // quick glow
+  setTimeout(function() {
+    document.getElementById('url4').classList.add('mat-cancel-color');
+  },1);
+  // remove glow
+  document.getElementById('url4').classList.remove('mat-cancel-color');
+  link4urlfield.value = "";
+}
+});
 
 }
 }
