@@ -769,12 +769,12 @@ function submitLinksActivity(){
 }
 function completed(){
   if(backgroundImageActivity == true){
-    window.alert("WAY TO GO!!!! YOU DID IT");
-    document.getElementById('activityTitle').innerHTML = "The <span style = 'color: #AFE24F'>&#60;CONGRATULATIONS!</span> YOU HAVE COMPLETED BUILDING YOUR FIRST WEBSITE!!!";
+    document.getElementById('activityTitle').innerHTML = "The <span style = 'color: #AFE24F'>CONGRATULATIONS!</span> YOU HAVE COMPLETED BUILDING YOUR FIRST WEBSITE!!!";
     //remove previous acitivity
     document.getElementById('backgroundImageActivity').style.display = "none";
     // show isntructions
     document.getElementById('backgroundImageInstructions').style.display = "none";
+    window.alert("Thanks for learning with us!");
 }
 
 }
