@@ -706,6 +706,7 @@ if (event.key === "Enter") {
   document.getElementById('url4').style.display = "inline";
   // change href to input fields value
   document.getElementById("websitelink4").href = "https://" + link4urlfield.value;
+  linksActivity = true;
 
 
   // quick glow
