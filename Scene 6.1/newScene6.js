@@ -618,11 +618,11 @@ function submitButtonStyleActivity(){
     // style color
     document.getElementById("url1").style.color = highlightedColor;
     // put link in console
-    document.getElementById("url1").innerHTML = "https://" + link1urlfield.value;
+    document.getElementById("url1").innerHTML =  link1urlfield.value;
     // show link
     document.getElementById('url1').style.display = "inline";
     // change href to input fields value
-    document.getElementById("websitelink1").href = "https://" + link1urlfield.value;
+    document.getElementById("websitelink1").href =  link1urlfield.value;
 
 
     // quick glow
@@ -646,11 +646,11 @@ if (event.key === "Enter") {
   // style color
   document.getElementById("url2").style.color = highlightedColor;
   // put link in console
-  document.getElementById("url2").innerHTML = "https://" + link2urlfield.value;
+  document.getElementById("url2").innerHTML = link2urlfield.value;
   // show link
   document.getElementById('url2').style.display = "inline";
   // change href to input fields value
-  document.getElementById("websitelink2").href = "https://" + link2urlfield.value;
+  document.getElementById("websitelink2").href = link2urlfield.value;
 
 
   // quick glow
@@ -674,11 +674,11 @@ if (event.key === "Enter") {
   // style color
   document.getElementById("url3").style.color = highlightedColor;
   // put link in console
-  document.getElementById("url3").innerHTML = "https://" + link3urlfield.value;
+  document.getElementById("url3").innerHTML = link3urlfield.value;
   // show link
   document.getElementById('url3').style.display = "inline";
   // change href to input fields value
-  document.getElementById("websitelink3").href = "https://" + link3urlfield.value;
+  document.getElementById("websitelink3").href = link3urlfield.value;
 
 
   // quick glow
@@ -702,11 +702,11 @@ if (event.key === "Enter") {
   // style color
   document.getElementById("url4").style.color = highlightedColor;
   // put link in console
-  document.getElementById("url4").innerHTML = "https://" + link4urlfield.value;
+  document.getElementById("url4").innerHTML =  link4urlfield.value;
   // show link
   document.getElementById('url4').style.display = "inline";
   // change href to input fields value
-  document.getElementById("websitelink4").href = "https://" + link4urlfield.value;
+  document.getElementById("websitelink4").href =  link4urlfield.value;
   linksActivity = true;
 
 
