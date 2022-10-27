@@ -9,8 +9,8 @@
   <body onload="activateColorPicker()">
 
     <audio loop style = "display:none;" src="music.mp3" controls></audio>
-    <img id = "HTMLWebbie" src="HTML Webbie.png" alt="">
-    <img  ondrop="dropColor(event)" ondragover="allowDrop(event)" id = "CSSWebbie" src="Asset 5.png" alt="">
+    <!-- <img id = "HTMLWebbie" src="HTML Webbie.png" alt=""> -->
+    <!-- <img  ondrop="dropColor(event)" ondragover="allowDrop(event)" id = "CSSWebbie" src="Asset 5.png" alt=""> -->
     <div id="htmlConsoleTitle">HTML</div>
     <div id="cssConsoleTitle">CSS</div>
     <div id = "activityTitle"> The <span id = "bodyDef" style = "color: #afe24f;""> body </span> selector selects the entire webpage. The <span style = "color: #afe24f">background-color</span> CSS property sets the background color of the selected element.</div>
@@ -70,7 +70,7 @@
           <h5 style = "display:none;" id = "websiteTitle5"> </h5>
           <h6 style = "display:none;" id = "websiteTitle6"> </h6>
           <p style = "display:none;" id = "websiteParagraph"> a short paragraph about website </p>
-          <a style = "display:none;" id = "websiteButton" href="" target="_blank">Button</a>
+          <a style = "display:none;" id = "websiteButton" src="www.GGC.EDU" target="_blank">Button</a>
       </div>
     </div>
     <img id = "bottomBorder" src = "bottomBorder.png"/>
@@ -82,7 +82,7 @@
 
     <div id = "activitySection">
       <div id = "bgActivity"class = "backgroundColorActivity">
-        <p> Choose a background color </p>
+        <p> <span style = "color: #AFE24F; "> DRAG and DROP </span> a background color to <span style = "color: #AFE24F; "> CSS </span> </p>
         <div id = "button1" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
         <div id = "button2" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
         <div id = "button3" draggable="true" ondragstart="drag(event)" class="colorButton"> </div>
@@ -101,7 +101,7 @@
 
     </div>
     <div style = "display: none;" id = "titleActivity" class="">
-      <p> Step 1: Enter a title [h1] for your website: </p>
+      <p> Step 1: Enter a title AND PRESS ENTER: </p>
       <br>
       <input style = "margin-left: -15px;" id = "ip" type="text" placeholder = "i.e My First Website ">
       <p> Step 2: Choose a heading size </p>
@@ -125,7 +125,7 @@
       <label for="h6check">h6</label>
     </div>
     <div style = "display: none;" id = "paragraphActivity" class="">
-      <p> Enter a short one sentence description for your website: </p>
+      <p> TYPE a short one sentence description for your website and PRESS ENTER </p>
       <input style = "margin-left: -15px;" id = "ip2" type="text" placeholder = "enter a short description" >
     </div>
     <div style = "display: none;" id = "fontColorActivity" class="">
@@ -155,31 +155,10 @@
       <input id = "ip6" type="color" id="colorpicker2" value="#FFFFFF">
     </div>
     <div style = "display: none;" id = "linksActivity" class="">
-      <p> Tab 1 Name </p>
-      <br>
-      <input style = "margin-left: -15px;" id = "link1text" type="text" placeholder = "i.e Home">
-      <p> Tab 1 Link </p>
-      <br>
-      <input style = "margin-left: -15px;" id = "link1url" type="text" placeholder = "paste a link here">
-      <br>
-      <p> Tab 2 Name </p>
-      <br>
-      <input style = "margin-left: -15px;" id = "link2text" type="text" placeholder = "i.e Contact">
-      <p> Tab 2 Link </p>
-      <br>
-      <input style = "margin-left: -15px;" id = "link2url" type="text" placeholder = "paste a link here">
-      <br>
-      <p> Tab 3 Name </p>
-      <br>
-      <input style = "margin-left: -15px;" id = "link3text" type="text" placeholder = "i.e About">
-      <p> Tab 3 Link </p>
-      <br>
-      <input style = "margin-left: -15px;" id = "link3url" type="text" placeholder = "paste a link here">
-      <br>
-      <p> Tab 4 Name </p>
+      <p> Tab Name </p>
       <br>
       <input style = "margin-left: -15px;" id = "link4text" type="text" placeholder = "i.e News">
-      <p> Tab 4 Link </p>
+      <p> Tab Link </p>
       <br>
       <input style = "margin-left: -15px;" id = "link4url" type="text" placeholder = "paste a link here">
       <br>
@@ -189,7 +168,7 @@
     <div style = "display: none" id= "backgroundImageActivity">
       <p> Step 1: Find an image you link on <span style = "color: #AFE24F">Google Images </span> </p>
       <p> Step 2: Right click the image and select <span style = "color: #AFE24F"> 'Copy Image Address"</span> </p>
-      <p> Step 3: Paste the adress here: </p>
+      <p> Step 3: Paste the adress here AND PRESS ENTER : </p>
       <br>
       <input style = "margin-left: -15px;" id = "bgurl" type="text" placeholder = "paste image address">
       <br>
