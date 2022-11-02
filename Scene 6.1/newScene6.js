@@ -69,15 +69,15 @@ function submitBgActivity(activity){
     //remove color choice acitivity
     document.getElementById('bgActivity').style.display = "none";
     // show title acivity instructions
-    document.getElementById('title').style.display = "inline";
+    // document.getElementById('title').style.display = "inline";
     // show input field
     document.getElementById('titleActivity').style.display = "block";
     // getting title input field and setting
     var titleInputField = document.getElementById('ip');
     console.log(titleInputField);
-    titleInputField.addEventListener("keypress", function(event) {
+    titleInputField.addEventListener("keyup", function(event) {
     // If the user presses the "Enter" key on the keyboard
-    if (event.key === "Enter") {
+    // if (event.key === "Enter") {
       // Cancel the default action, if needed
       event.preventDefault();
       // change website title and title value to text in input field
@@ -99,9 +99,8 @@ function submitBgActivity(activity){
       document.getElementById('titleCode').classList.remove('mat-cancel-color');
       document.getElementById('titleCode').classList.remove('mat-cancel-color');
       document.getElementById("h1check").checked = true;
-      titleInputField.value = "";
       titleActivity = true;
-    }
+    // }
     });
 
     // border checkbox input
@@ -344,9 +343,9 @@ function submitTitleActivity(activity){
       // getting paragraph input field
       var paragraphInputField = document.getElementById('ip2');
       console.log(paragraphInputField);
-      paragraphInputField.addEventListener("keypress", function(event) {
+      paragraphInputField.addEventListener("keyup", function(event) {
       // If the user presses the "Enter" key on the keyboard
-      if (event.key === "Enter") {
+      // if (event.key === "Enter") {
         var usertext = document.getElementById('ip2').value;
         // Cancel the default action, if needed
         event.preventDefault();
@@ -366,9 +365,8 @@ function submitTitleActivity(activity){
         document.getElementById('paragraphCode').classList.remove('mat-cancel-color');
         document.getElementById('paragraphCode').classList.remove('mat-cancel-color');
 
-        paragraphInputField.value = "";
         paragraphActivity = true;
-      }
+      // }
       });
 
     }
@@ -439,9 +437,9 @@ function submitFontColorActivity(activity){
       // button name
       var buttonInputField = document.getElementById('ip10');
       console.log(buttonInputField);
-      buttonInputField.addEventListener("keypress", function(event) {
+      buttonInputField.addEventListener("keyup", function(event) {
       // If the user presses the "Enter" key on the keyboard
-      if (event.key === "Enter") {
+      // if (event.key === "Enter") {
 
         var text = buttonInputField.value;
         console.log(text);
@@ -461,8 +459,7 @@ function submitFontColorActivity(activity){
         document.getElementById("buttonValue").innerHTML = text;
         document.getElementById('websiteButton').innerHTML = text;
         document.getElementById("buttonValue").style.color = highlightedColor;
-        buttonInputField.value = "";
-      }
+      // }
       });
       // border checkbox input
       var addBorder = document.getElementById('border');
@@ -587,9 +584,9 @@ function submitButtonStyleActivity(){
   // getting title input field and setting
   var link4inputField = document.getElementById('link4text');
   console.log(link4inputField);
-  link4inputField.addEventListener("keypress", function(event) {
+  link4inputField.addEventListener("keyup", function(event) {
   // If the user presses the "Enter" key on the keyboard
-  if (event.key === "Enter") {
+  // if (event.key === "Enter") {
     // Cancel the default action, if needed
     event.preventDefault();
     // change website title and title value to text in input field
@@ -603,99 +600,99 @@ function submitButtonStyleActivity(){
     },1);
     // remove glow
     document.getElementById('link4Code').classList.remove('mat-cancel-color');
-    link4inputField.value = "";
-  }
+    // link4inputField.value = "";
+  // }
 });
 
-  // get link 1 field
-  var link1urlfield = document.getElementById('link1url');
-  link1urlfield.addEventListener("keypress", function(event) {
-  // If the user presses the "Enter" key on the keyboard while in this field
-  if (event.key === "Enter") {
-    // Cancel the default action, if needed
-    event.preventDefault();
-    // change href link and href value to text in input field
-    // style color
-    document.getElementById("url1").style.color = highlightedColor;
-    // put link in console
-    document.getElementById("url1").innerHTML =  link1urlfield.value;
-    // show link
-    document.getElementById('url1').style.display = "inline";
-    // change href to input fields value
-    document.getElementById("websitelink1").href =  link1urlfield.value;
-
-
-    // quick glow
-    setTimeout(function() {
-      document.getElementById('url1').classList.add('mat-cancel-color');
-    },1);
-    // remove glow
-    document.getElementById('url1').classList.remove('mat-cancel-color');
-    link1urlfield.value = "";
-  }
-});
-
-// get link 2 field
-var link2urlfield = document.getElementById('link2url');
-link2urlfield.addEventListener("keypress", function(event) {
-// If the user presses the "Enter" key on the keyboard while in this field
-if (event.key === "Enter") {
-  // Cancel the default action, if needed
-  event.preventDefault();
-  // change href link and href value to text in input field
-  // style color
-  document.getElementById("url2").style.color = highlightedColor;
-  // put link in console
-  document.getElementById("url2").innerHTML = link2urlfield.value;
-  // show link
-  document.getElementById('url2').style.display = "inline";
-  // change href to input fields value
-  document.getElementById("websitelink2").href = link2urlfield.value;
-
-
-  // quick glow
-  setTimeout(function() {
-    document.getElementById('url2').classList.add('mat-cancel-color');
-  },1);
-  // remove glow
-  document.getElementById('url1').classList.remove('mat-cancel-color');
-  link2urlfield.value = "";
-}
-});
-
-// get link 2 field
-var link3urlfield = document.getElementById('link3url');
-link3urlfield.addEventListener("keypress", function(event) {
-// If the user presses the "Enter" key on the keyboard while in this field
-if (event.key === "Enter") {
-  // Cancel the default action, if needed
-  event.preventDefault();
-  // change href link and href value to text in input field
-  // style color
-  document.getElementById("url3").style.color = highlightedColor;
-  // put link in console
-  document.getElementById("url3").innerHTML = link3urlfield.value;
-  // show link
-  document.getElementById('url3').style.display = "inline";
-  // change href to input fields value
-  document.getElementById("websitelink3").href = link3urlfield.value;
-
-
-  // quick glow
-  setTimeout(function() {
-    document.getElementById('url3').classList.add('mat-cancel-color');
-  },1);
-  // remove glow
-  document.getElementById('url1').classList.remove('mat-cancel-color');
-  link3urlfield.value = "";
-}
-});
+//   // get link 1 field
+//   var link1urlfield = document.getElementById('link1url');
+//   link1urlfield.addEventListener("keypress", function(event) {
+//   // If the user presses the "Enter" key on the keyboard while in this field
+//   if (event.key === "Enter") {
+//     // Cancel the default action, if needed
+//     event.preventDefault();
+//     // change href link and href value to text in input field
+//     // style color
+//     document.getElementById("url1").style.color = highlightedColor;
+//     // put link in console
+//     document.getElementById("url1").innerHTML =  link1urlfield.value;
+//     // show link
+//     document.getElementById('url1').style.display = "inline";
+//     // change href to input fields value
+//     document.getElementById("websitelink1").href =  link1urlfield.value;
+//
+//
+//     // quick glow
+//     setTimeout(function() {
+//       document.getElementById('url1').classList.add('mat-cancel-color');
+//     },1);
+//     // remove glow
+//     document.getElementById('url1').classList.remove('mat-cancel-color');
+//     link1urlfield.value = "";
+//   }
+// });
+//
+// // get link 2 field
+// var link2urlfield = document.getElementById('link2url');
+// link2urlfield.addEventListener("keypress", function(event) {
+// // If the user presses the "Enter" key on the keyboard while in this field
+// if (event.key === "Enter") {
+//   // Cancel the default action, if needed
+//   event.preventDefault();
+//   // change href link and href value to text in input field
+//   // style color
+//   document.getElementById("url2").style.color = highlightedColor;
+//   // put link in console
+//   document.getElementById("url2").innerHTML = link2urlfield.value;
+//   // show link
+//   document.getElementById('url2').style.display = "inline";
+//   // change href to input fields value
+//   document.getElementById("websitelink2").href = link2urlfield.value;
+//
+//
+//   // quick glow
+//   setTimeout(function() {
+//     document.getElementById('url2').classList.add('mat-cancel-color');
+//   },1);
+//   // remove glow
+//   document.getElementById('url1').classList.remove('mat-cancel-color');
+//   link2urlfield.value = "";
+// }
+// });
+//
+// // get link 2 field
+// var link3urlfield = document.getElementById('link3url');
+// link3urlfield.addEventListener("keypress", function(event) {
+// // If the user presses the "Enter" key on the keyboard while in this field
+// if (event.key === "Enter") {
+//   // Cancel the default action, if needed
+//   event.preventDefault();
+//   // change href link and href value to text in input field
+//   // style color
+//   document.getElementById("url3").style.color = highlightedColor;
+//   // put link in console
+//   document.getElementById("url3").innerHTML = link3urlfield.value;
+//   // show link
+//   document.getElementById('url3').style.display = "inline";
+//   // change href to input fields value
+//   document.getElementById("websitelink3").href = link3urlfield.value;
+//
+//
+//   // quick glow
+//   setTimeout(function() {
+//     document.getElementById('url3').classList.add('mat-cancel-color');
+//   },1);
+//   // remove glow
+//   document.getElementById('url1').classList.remove('mat-cancel-color');
+//   link3urlfield.value = "";
+// }
+// });
 
 // get link 2 field
 var link4urlfield = document.getElementById('link4url');
-link4urlfield.addEventListener("keypress", function(event) {
+link4urlfield.addEventListener("keyup", function(event) {
 // If the user presses the "Enter" key on the keyboard while in this field
-if (event.key === "Enter") {
+// if (event.key === "Enter") {
   // Cancel the default action, if needed
   event.preventDefault();
   // change href link and href value to text in input field
@@ -716,8 +713,7 @@ if (event.key === "Enter") {
   },1);
   // remove glow
   document.getElementById('url4').classList.remove('mat-cancel-color');
-  link4urlfield.value = "";
-}
+// }
 });
 
 }
@@ -738,9 +734,9 @@ function submitLinksActivity(){
     document.getElementById('backgroundImageInstructions').style.display = "block";
     // get link 1 field
     var bgurl = document.getElementById('bgurl');
-    bgurl.addEventListener("keypress", function(event) {
+    bgurl.addEventListener("keyup", function(event) {
     // If the user presses the "Enter" key on the keyboard while in this field
-    if (event.key === "Enter") {
+    // if (event.key === "Enter") {
       // Cancel the default action, if needed
       event.preventDefault();
       // change href link and href value to text in input field
@@ -760,9 +756,8 @@ function submitLinksActivity(){
       },1);
       // remove glow
       document.getElementById('bgImageCode').classList.remove('mat-cancel-color');
-      bgurl.value = "";
       backgroundImageActivity = true;
-    }
+    // }
   });
 
   }
